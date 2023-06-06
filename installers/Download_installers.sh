@@ -3,7 +3,7 @@
 # Open current directory
 cd "$(dirname "$0")"
 
-# Downloading
+# Downloading files
 echo Downloading Runtime Installers. This may take a while...
 
 urls=(
@@ -37,7 +37,7 @@ curl ${urls[$i]} -o ${outs[$i]} --silent &
 done
 wait
 
-# Extract downloaded 
+# Extract downloaded files
 echo Extracting files...
 
 7z x -o./directx/ directx/directx_Jun2010_redist.exe
