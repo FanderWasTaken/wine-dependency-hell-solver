@@ -79,7 +79,7 @@ rm ${torm[$i]} &
 done
 wait
 
-cat ui/WDHS.txt
+cat WDHS.txt
 echo  
 
 read -p "Finished downloading. Now you can run WDHS.bat with Wine within the required prefix. Press Enter to close the terminal." </dev/tty
