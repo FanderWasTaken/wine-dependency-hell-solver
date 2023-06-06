@@ -6,17 +6,17 @@
 
 </div>
 
-Ever had issues launching or running Windows games under Wine? If the answer is *"Yes"*, then try these scripts I made; they should solve most issues you may encounter. And in case my script did make your gaming experience worse, then feel free to create an issue here on GitHub so I can help you out.
+Ever had issues launching or running Windows games under Wine? If the answer is "Yes", then try these scripts I made; they should solve most issues you may encounter. And in case my script did make your gaming experience worse, then feel free to create an issue here on GitHub so I can help you out.
 
 ## What is this exactly?
-This is a collection of scripts that function similarly to how Valve's installscript.vdf does. The said .vdf file installs Windows dependencies upon first launch for games to work properly. However, this is not always the case. Not all Steam games come with all the required dependencies installed. Also, non-Steam and older games don't always come with these either. So I decided to write a *universal* script to install **every single dependency** any game may require to work. This usually fixes startup problems, issues related to videos not playing, missing audio, and broken UI or menus. These scripts should work with any Wine version and prefix manager, including Steam.
+This is a collection of scripts that function similarly to how Valve's installscript.vdf does. The said .vdf file installs Windows dependencies upon first launch for games to work properly. However, this is not always the case. Not all Steam games come with all the required dependencies installed. Also, non-Steam and older games don't always come with these either. So I decided to write a universal script to install **every single dependency** any game may require to work. This usually fixes startup problems, issues related to videos not playing, missing audio, and broken UI or menus. These scripts should work with any Wine version and prefix manager, including Steam.
 
 ## What's being installed:
-- DirectX End-User Runtimes
-- ASP.NET Core Runtime
-- Media Foundation
-- NVIDIA PhysX
-- Visual C++ Redistributable packages
+- [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109)
+- [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download)
+- [Media](https://github.com/z0z0z/mf-installcab) [Foundation](https://github.com/z0z0z/mf-install)
+- [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)
+- [Visual C++ Redistributable packages](https://www.microsoft.com/en-us/download/details.aspx?id=30679)
 
 **Disclaimer**: Though my script installs Media Foundation dependencies you may still exhibit unwanted behavior.
 
@@ -34,30 +34,21 @@ Make sure that you have `curl` and `7z` installed on your system before proceedi
 
 Steps 1-4 are only for people running this for the first time. You can keep downloaded installers and `WDHS.bat` somewhere in your home directory to re-use later if needed.
 
-## Additional tips
+## Additional tips for a better gaming experience
 
-If you are using Lutris, go into `Preferences`, `Global Options` for **Wine runner** and make sure to have `Disable Lutris Runtime` and `Prefer system libraries` enabled (switched on).
+If you are using [Lutris](https://lutris.net/), go into `Preferences`, `Global Options` for **Wine runner** and make sure to have `Disable Lutris Runtime` and `Prefer system libraries` enabled (switched on).
 
-Also, I personally recommend you install `gamescope` package from your distribution and use it with games. Gamescope can fix screen-tearing and lower overall input latency during gameplay. It can be enabled via Lutris' `Preferences`, `System Options` menus. For Steam games, add `gamescope -f -e -h [your screen resolution, e.g. 1080] -r [optional framerate cap, e.g. 60] -- %command%` as a launch option.
+Also, I personally recommend you install `gamescope` package from your distribution and use it with games. [Gamescope](https://github.com/ValveSoftware/gamescope) can fix screen-tearing and lower overall input latency during gameplay. It can be enabled via [Lutris](https://lutris.net/)' `Preferences`, `System Options` menus. For Steam games, add `gamescope -f -e -h [your screen resolution, e.g. 1080] -r [optional framerate cap, e.g. 60] -- %command%` as a launch option.
+
+[Protontricks](https://github.com/Matoking/protontricks) can be used to execute `WDHS.bat` with a double click and applied to any Steam game you have installed.
+
+If you wish to import your [Lutris](https://lutris.net/) games to Steam with the least amount of headaches, use [Steam ROM Manager](https://github.com/SteamGridDB/steam-rom-manager). Despite its name, SRM can import data from `.desktop` application shortcut. How does it differ from importing games directly from Lutris? It allows you to add custom artwork for games, sourced from [SteamGridDB](https://www.steamgriddb.com/). Create a new Parser and use `Non Steam Shortcuts` as a template. Add `*/${title}@(.desktop|.DESKTOP)` as `User's glob` parameter and lead `ROMs directory` to the path you have your games installed. Create a desktop shortcut for your game from Lutris and place `.desktop` shortcut into your game's directory. Save, go to `Preview` and press `Parse`.
 
 ## Troubleshooting
-Before opening an issue, make sure to try different Wine or Proton versions with your game. The recommended path is to go from the newest release down to the oldest. Personally, I found that Proton 7 had fewer compatibility issues than Proton 8. The easiest way to install **custom** Wine builds is with [ProtonUp-Qt](https://davidotek.github.io/protonup-qt/).
+Before opening an issue, make sure to try different [Wine](https://www.winehq.org/) or [Proton](https://github.com/ValveSoftware/Proton) versions with your game. The recommended path is to go from the newest release down to the oldest. Personally, I found that Proton 7 had fewer compatibility issues than Proton 8.
 
 ## Credits
-- [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide)
 - [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts)
-- [ProtonUp-Qt | DavidoTek](https://github.com/DavidoTek/ProtonUp-Qt)
-- [DirectX End-User Runtimes (June 2010) | Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=8109)
-- [.NET | Microsoft](https://dotnet.microsoft.com/en-us/download)
-- [Media Foundation workaround for Wine | z0z0z](https://github.com/z0z0z/mf-install)
-- [Installcab based Media Foundation workaround for Wine | z0z0z](https://github.com/z0z0z/mf-installcab)
-- [PhysX System Software | NVIDIA](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)
-- [ Visual C++ Redistributable for Visual Studio 2012 Update 4  | Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=30679)
-- [Wine | Wine authors](https://www.winehq.org/)
-- [Proton | Valve](https://github.com/ValveSoftware/Proton)
-- [Proton-GE | GloriousEggroll](https://github.com/GloriousEggroll/proton-ge-custom)
-- [Wine-GE | GloriousEggroll](https://github.com/GloriousEggroll/wine-ge-custom)
-- [Lutris | Community, Mathieu Comandon](https://lutris.net/)
-- [Gamescope | ArchWiki](https://wiki.archlinux.org/title/Gamescope)
+- [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide)
 ---
 ### <p style="text-align: center;">This project was created with the help of [VSCodium](https://vscodium.com/). Thank you guys 💙</p>
