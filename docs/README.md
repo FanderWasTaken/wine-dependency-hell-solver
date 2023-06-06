@@ -18,7 +18,7 @@ This is a collection of scripts that function similarly to how Valve's installsc
 - NVIDIA PhysX
 - Visual C++ Redistributable packages
 
-**Disclaimer**: Though my script installs Media Foundation dependencies, official Proton and Wine may still exhibit unwanted behavior; Proton-GE and Wine-GE are recommended. The easiest way to install these is with [ProtonUp-Qt](https://davidotek.github.io/protonup-qt/).
+**Disclaimer**: Though my script installs Media Foundation dependencies you may still exhibit unwanted behavior.
 
 **All installers are taken directly from official sources.**
 
@@ -41,7 +41,7 @@ If you are using Lutris, go into `Preferences`, `Global Options` for **Wine runn
 Also, I personally recommend you install `gamescope` package from your distribution and use it with games. Gamescope can fix screen-tearing and lower overall input latency during gameplay. It can be enabled via Lutris' `Preferences`, `System Options` menus. For Steam games, add `gamescope -f -e -h [your screen resolution, e.g. 1080] -r [optional framerate cap, e.g. 60] -- %command%` as a launch option.
 
 ## Troubleshooting
-Before opening an issue, make sure to try different Wine or Proton versions with your game. The recommended path is to go from the newest release down to the oldest. Personally, I found that Proton 7 had fewer compatibility issues than Proton 8.
+Before opening an issue, make sure to try different Wine or Proton versions with your game. The recommended path is to go from the newest release down to the oldest. Personally, I found that Proton 7 had fewer compatibility issues than Proton 8. The easiest way to install **custom** Wine builds is with [ProtonUp-Qt](https://davidotek.github.io/protonup-qt/).
 
 ## Credits
 - [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide)
