@@ -8,6 +8,8 @@
 
 Ever had issues launching or running Windows games under Wine? If the answer is "Yes", then try these scripts I made; they should solve most issues you may encounter. And in case my script did make your gaming experience worse, then feel free to create an issue here on GitHub so I can help you out.
 
+*Although I made these scripts primarily for games, this can help application compatibility as well. Adobe apps use some DirectX for rendering, and some programs are written using .NET. So feel free to try it out in that use case as well.*
+
 ## What is this exactly?
 This is a collection of scripts that function similarly to how Valve's installscript.vdf does. The said .vdf file installs Windows dependencies upon first launch for games to work properly. However, this is not always the case. Not all Steam games come with all the required dependencies installed. Also, non-Steam and older games don't always come with these either. So I decided to write a universal script to install **every single dependency** any game may require to work. This usually fixes startup problems, issues related to videos not playing, missing audio, and broken UI or menus. These scripts should work with any Wine version and prefix manager, including Steam.
 
