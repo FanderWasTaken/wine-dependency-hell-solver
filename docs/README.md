@@ -4,7 +4,7 @@
 
 ![logo](WDHS.png)
 
-</div>
+</div> 
 
 Ever had issues launching or running Windows games under Wine? If the answer is "Yes", then try these scripts I made; they should solve most issues you may encounter. And in case my script did make your gaming experience worse, then feel free to create an issue here on GitHub so I can help you out.
 
