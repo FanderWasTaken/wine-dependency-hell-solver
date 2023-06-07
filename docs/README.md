@@ -1,10 +1,6 @@
 # Wine Dependency Hell Solver
 
-<div style="text-align: center;">
-
 ![logo](WDHS.png)
-
-</div> 
 
 Ever had issues launching or running Windows games under Wine? If the answer is "Yes", then try these scripts I made; they should solve most issues you may encounter. And in case my script did make your gaming experience worse, then feel free to create an issue here on GitHub so I can help you out.
 
@@ -57,4 +53,4 @@ Before opening an issue, make sure to try different [Wine](https://www.winehq.or
 - [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts)
 - [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide)
 ---
-### <p style="text-align: center;">This project was created with the help of [VSCodium](https://vscodium.com/). Thank you guys 💙</p>
+### This project was created with the help of [VSCodium](https://vscodium.com/). Thank you guys 💙
