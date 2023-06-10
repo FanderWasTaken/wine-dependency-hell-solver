@@ -101,6 +101,5 @@ echo
 
 read -p "Finished downloading. Now you can run WDHS.bat with Wine within the required prefix. Press Enter to close the terminal." </dev/tty
 wait
-rm ./WDHS.txt
 rm ./Download_installers.sh
 exit
