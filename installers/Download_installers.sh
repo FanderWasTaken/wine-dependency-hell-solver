@@ -3,7 +3,7 @@
 # Open current directory
 cd "$(dirname "$0")"
 
-# Downloading files
+# Download files
 echo Downloading Runtime Installers. This may take a while...
 
 urls=(
@@ -40,7 +40,7 @@ wait
 # Extract downloaded files
 echo Extracting files...
 
-7z x -o./directx/ directx/directx_Jun2010_redist.exe
+7z x -o./directx/ directx/directx_Jun2010_redist.exe -y > null
 
 zips=(
     'dotnet/aspnetcore-runtime-6.0.16-win-x86.zip'
@@ -61,12 +61,13 @@ unzip -q ${zips[$i]} -d ${dirs[$i]} &
 done
 wait
 
-# Remove .zip files
+# Remove extracted files
 
 echo Cleaning up...
 
 torm=(
-    'directx/directx_Jun2010_redist.exe' 
+    'directx/directx_Jun2010_redist.exe'
+    'directx/null'
     'dotnet/aspnetcore-runtime-6.0.16-win-x86.zip' 
     'dotnet/aspnetcore-runtime-6.0.16-win-x64.zip' 
     'dotnet/aspnetcore-runtime-7.0.5-win-x86.zip'
@@ -79,8 +80,22 @@ rm ${torm[$i]} &
 done
 wait
 
-cat WDHS.txt
-echo  
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣷⠀⠀⢸⡆⠀⠀⣿⣿⣿⣿⠂⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⡀⠀⢻⣿⣿⣿⣷⠀⠀⢰⣿⣿⣿⣿⡟⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⠀⢀⣿⣿⡀⠀⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⠀⣸⣿⣿⣷⠀⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⠛⠛⢻⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿⣿⠛⠛⢻⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⢠⣿⣿⣿⣿⣧⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⣿⣀⣀⣸⣿⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿⣿⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠘⠻⢿⣿⣿⣿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠈⠙⠻⣿⣿⣿⣿⣿⣷⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⣿⠀⠀⠀⣿⣿⣿⣿⡇⠀⠀⢀⣀⣀⣀⣀⠀⠀⢹⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⠏⢿⣿⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⢀⣴⣾⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⣿⠀⠀⠀⣿⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿⣿⣷⣄⣸⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⡏⠀⠘⣿⣿⣿⣿⣿⡿⠂⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⢸⣿⣿⣿⣿⠀⠀⠀⣿⣿⣿⣿⡇⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⡟⠀⠀⠀⢹⣿⡿⠟⠁⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠁⠀⠀⠈⠻⣿⣿⣿⠀⠀⠀⣿⣿⣿⣿⡇⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⠁⠀⠀⠀⠀⠋⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠈⠙⠿⠀⠀⠀⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠉⠻⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⠿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⡿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
 read -p "Finished downloading. Now you can run WDHS.bat with Wine within the required prefix. Press Enter to close the terminal." </dev/tty
 wait
