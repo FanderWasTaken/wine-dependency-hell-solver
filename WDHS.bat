@@ -33,8 +33,6 @@ start /wait installers/mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b9
 start /wait installers/mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe wmadmod
 start /wait installers/mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe wmvdecod
 start /wait installers/mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe wmadmod
-start /wait regedit.exe installers/mf/mf.reg
-start /wait regedit.exe installers/mf/wmf.reg
 start /wait regsvr32 colorcnv.dll
 start /wait regsvr32 msmpeg2adec.dll
 start /wait regsvr32 msmpeg2vdec.dll
@@ -66,8 +64,6 @@ start /wait installers/mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d4
 start /wait installers/mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe wmadmod
 start /wait installers/mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe wmvdecod
 start /wait installers/mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe wmadmod
-start /wait regedit.exe installers/mf/mf.reg
-start /wait regedit.exe installers/mf/wmf.reg
 start /wait regsvr32 colorcnv.dll
 start /wait regsvr32 msmpeg2adec.dll
 start /wait regsvr32 msmpeg2vdec.dll
