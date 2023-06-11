@@ -14,7 +14,7 @@ This is a collection of scripts that function similarly to how Valve's installsc
 ## What's being installed:
 - [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109)
 - [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download)
-- [Media](https://github.com/z0z0z/mf-installcab) [Foundation](https://github.com/z0z0z/mf-install)
+- [Media Foundation](https://github.com/z0z0z/mf-installcab)
 - [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)
 - [Visual C++ Redistributable packages](https://www.microsoft.com/en-us/download/details.aspx?id=30679)
 
