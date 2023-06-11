@@ -3,7 +3,13 @@
 :: Open installer's directory
 CD %~dp0
 
-cscript ui/MessageBox.vbs "Packages are going to be installed now. There will be a pop-up window when it's done installing. Caution: There will be some windows showing up rapidly."
+:: Create message box
+echo Set objArgs = WScript.Arguments > msg.vbs
+echo messageText = objArgs(0) >> msg.vbs
+echo MsgBox messageText >> msg.vbs
+
+:: Call message box
+cscript msg.vbs "Packages are going to be installed now. There will be a pop-up window when it's done installing. Caution: There will be some windows showing up rapidly."
 
 echo Installing packages:
 
@@ -76,6 +82,10 @@ goto END
 
 :END
 
-cscript ui/MessageBox.vbs "Installation was completed successfully!"
+:: Call message box
+cscript msg.vbs "Installation was completed successfully!"
+
+:: Cleaning up
+del msg.vbs
 
 exit
