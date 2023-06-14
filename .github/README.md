@@ -9,9 +9,11 @@ Ever had issues launching or running Windows games or applications under Wine? I
 Feel free to donate if you like my work or if I was of any help to you on your gaming journey!
 
 ## What is this exactly?
+
 This is a collection of scripts that function similarly to how Valve's installscript.vdf does. The said .vdf file installs Windows dependencies upon first launch for games to work properly. However, this is not always the case. Not all Steam games come with all the required dependencies installed. Also, non-Steam and older games don't always come with these either. So I decided to write a universal script to install **every single dependency** any game may require to work. This usually fixes startup problems, issues related to videos not playing, missing audio, and broken UI or menus. These scripts should work with any Wine version and prefix manager, including Steam.
 
 ## What's being installed:
+
 - [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109)
 - [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download)
 - [Media Foundation](https://github.com/z0z0z/mf-installcab)
@@ -53,6 +55,11 @@ If you wish to import your [Lutris](https://lutris.net/) games to Steam with the
 ## Troubleshooting
 
 Before opening an issue, make sure to try different [Wine](https://www.winehq.org/) or [Proton](https://github.com/ValveSoftware/Proton) versions. The recommended path is to go from the newest release down to the oldest.
+
+## Issues unresolved
+
+There seems to be an ongoing trend for games made with [Unreal Engine](https://www.unrealengine.com/en-US) to stutter incessantly, regardless of whether a shader compilation screen is present or not. In my testing, the stuttering issues occur with Unreal Engine 3 and upwards. [dxvk-gplasync](https://gitlab.com/Ph42oN/dxvk-gplasync) can be used as a hacky workaround, although it's not recommended as it has a low success rate at fixing the stuttering issue. Games that are known to exhibit this kind of behavior are: A Hat in Time, Remember Me, SIFU, Dead Space (2023), Callisto Protocol, Star Wars Jedi: Survivor, and probably more. The only real solution to this problem currently seems to be to not play games made with the Unreal Engine.
+
 
 ## Credits
 - [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts)
