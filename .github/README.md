@@ -28,13 +28,9 @@ This is a collection of scripts that function similarly to how Valve's installsc
 
 Make sure that you have `curl` and `7z` installed on your system before proceeding.
 
-1. Download and extract the latest release.
-2. Open your terminal in the extracted folder.
-3. Make `.sh` executable by running `chmod +x ./Download_installers.sh`.
-4. Run `./Download_installers.sh` in your terminal. This will download  all the required installation files.
-5. Run `WDHS.bat` with Wine or Proton inside the game's prefix; the script will inform you when it's done.
-
-Steps 1-4 are only for people running this for the first time. You can keep downloaded installers and `WDHS.bat` somewhere in your home directory to re-use later if needed.
+1. Create a folder where you will download, unpack, and store all of the installers, and open your terminal in that folder.
+2. Run `curl -s https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh -o WDHS.sh && ./WDHS.sh`.
+5. Start `WDHS.bat` with Wine or Proton inside the game's prefix.
 
 ## Additional tips for a better gaming experience
 

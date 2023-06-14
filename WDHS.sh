@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Clear the terminal
+clear
+
 # Open current directory
 cd "$(dirname "$0")"
 
@@ -99,6 +102,13 @@ rm installers/${torm[$i]} &
 done
 wait
 
+# Create the installer
+
+echo Creating the WDHS.bat installer...
+
+curl https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.bat -o WDHS.bat --silent
+wait
+
 echo  
 echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣷⠀⠀⢸⡆⠀⠀⣿⣿⣿⣿⠂⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⡀⠀⢻⣿⣿⣿⣷⠀⠀⢰⣿⣿⣿⣿⡟⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⠀⢀⣿⣿⡀⠀⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⢸⣿⣿⣿⣿⠀⠀⢸⣿⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -120,5 +130,5 @@ echo
 
 read -p "Finished downloading. Now you can run WDHS.bat with Wine within the required prefix. Press Enter to close the terminal." </dev/tty
 wait
-rm ./Download_installers.sh
+rm ./WDHS.sh
 exit
