@@ -29,7 +29,7 @@ This is a collection of scripts that function similarly to how Valve's installsc
 Make sure that you have `curl` and `7z` installed on your system before proceeding.
 
 1. Create a folder where you will download, unpack, and store all of the installers, and open your terminal in that folder.
-2. Run `curl -s https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh -o WDHS.sh && ./WDHS.sh`.
+2. Run `curl -s https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh -o WDHS.sh && chmod +x ./WDHS.sh && ./WDHS.sh`.
 5. Start `WDHS.bat` with Wine or Proton inside the game's prefix.
 
 ## Additional tips for a better gaming experience
