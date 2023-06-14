@@ -1,6 +1,5 @@
 @echo off
 
-:: Open installer's directory
 CD %~dp0
 
 :: Create message box
@@ -8,7 +7,6 @@ echo Set objArgs = WScript.Arguments > msg.vbs
 echo messageText = objArgs(0) >> msg.vbs
 echo MsgBox messageText >> msg.vbs
 
-:: Call message box
 cscript msg.vbs "Packages are going to be installed now. There will be a pop-up window when it's done installing. Caution: There will be some windows showing up rapidly."
 
 echo Installing packages:
@@ -18,7 +16,6 @@ set IS_X64=0 && if "%PROCESSOR_ARCHITECTURE%"=="AMD64" (set IS_X64=1) else (if "
 if "%IS_X64%" == "1" goto X64
 
 ::32-bit install
-
 echo DirectX End-User Runtimes...
 start /wait installers/directx/DXSETUP.exe /silent
 
@@ -79,7 +76,6 @@ goto END
 
 :END
 
-:: Call message box
 cscript msg.vbs "Installation was completed successfully!"
 
 :: Cleaning up
