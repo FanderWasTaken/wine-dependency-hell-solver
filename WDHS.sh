@@ -1,12 +1,7 @@
 #!/bin/bash
 
-# Clear the terminal
 clear
-
-# Open current directory
 cd "$(dirname "$0")"
-
-# Create installers folders
 
 mkdir installers
 wait
@@ -25,7 +20,6 @@ mkdir installers/${idirs[$i]} &
 done
 wait
 
-# Download files
 echo Downloading Runtime Installers. This may take a while...
 
 urls=(
@@ -59,7 +53,6 @@ curl ${urls[$i]} -o installers/${outs[$i]} --silent &
 done
 wait
 
-# Extract downloaded files
 echo Extracting files...
 
 7z x -oinstallers/directx/ installers/directx/directx_Jun2010_redist.exe -y > installers/directx/null
@@ -83,8 +76,6 @@ unzip -q installers/${zips[$i]} -d installers/${dirs[$i]} &
 done
 wait
 
-# Remove extracted files
-
 echo Cleaning up...
 
 torm=(
@@ -102,11 +93,9 @@ rm installers/${torm[$i]} &
 done
 wait
 
-# Create the installer
-
 echo Creating the WDHS.bat installer...
 
-curl https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.bat -o WDHS.bat --silent
+curl https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.bat -o ./WDHS.bat --silent
 wait
 
 echo  
@@ -128,7 +117,6 @@ echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⡿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
 echo ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 echo  
 
-read -p "Finished downloading. Now you can run WDHS.bat with Wine within the required prefix. Press Enter to close the terminal." </dev/tty
+read -p "Setup complete. Now you can run WDHS.bat with Wine within the required prefix."
 wait
 rm ./WDHS.sh
-exit
