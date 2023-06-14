@@ -38,21 +38,21 @@ urls=(
     'https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x64.exe'
     )
 outs=(
-    'installers/directx/directx_Jun2010_redist.exe' 
-    'installers/dotnet/aspnetcore-runtime-6.0.16-win-x86.zip' 
-    'installers/dotnet/aspnetcore-runtime-6.0.16-win-x64.zip' 
-    'installers/dotnet/aspnetcore-runtime-7.0.5-win-x86.zip'
-    'installers/dotnet/aspnetcore-runtime-7.0.5-win-x64.zip'
-    'installers/mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe'
-    'installers/mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe'
-    'installers/physx/PhysX_9.09.0428_SystemSoftware.exe'
-    'installers/vcredist/vcredist_x86.exe'
-    'installers/vcredist/vcredist_x64.exe'
+    'directx/directx_Jun2010_redist.exe' 
+    'dotnet/aspnetcore-runtime-6.0.16-win-x86.zip' 
+    'dotnet/aspnetcore-runtime-6.0.16-win-x64.zip' 
+    'dotnet/aspnetcore-runtime-7.0.5-win-x86.zip'
+    'dotnet/aspnetcore-runtime-7.0.5-win-x64.zip'
+    'mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe'
+    'mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe'
+    'physx/PhysX_9.09.0428_SystemSoftware.exe'
+    'vcredist/vcredist_x86.exe'
+    'vcredist/vcredist_x64.exe'
     )
 
 for i in "${!urls[@]}"; 
 do 
-curl ${urls[$i]} -o ${outs[$i]} --silent &
+curl ${urls[$i]} -o installers/${outs[$i]} --silent &
 done
 wait
 
@@ -62,21 +62,21 @@ echo Extracting files...
 7z x -oinstallers/directx/ installers/directx/directx_Jun2010_redist.exe -y > installers/directx/null
 
 zips=(
-    'installers/dotnet/aspnetcore-runtime-6.0.16-win-x86.zip'
-    'installers/dotnet/aspnetcore-runtime-6.0.16-win-x64.zip'
-    'installers/dotnet/aspnetcore-runtime-7.0.5-win-x86.zip'
-    'installers/dotnet/aspnetcore-runtime-7.0.5-win-x64.zip'
+    'dotnet/aspnetcore-runtime-6.0.16-win-x86.zip'
+    'dotnet/aspnetcore-runtime-6.0.16-win-x64.zip'
+    'dotnet/aspnetcore-runtime-7.0.5-win-x86.zip'
+    'dotnet/aspnetcore-runtime-7.0.5-win-x64.zip'
     )
 dirs=(
-    'installers/dotnet/aspnetcore-runtime-6.0.16-win-x86'
-    'installers/dotnet/aspnetcore-runtime-6.0.16-win-x64'
-    'installers/dotnet/aspnetcore-runtime-7.0.5-win-x86'
-    'installers/dotnet/aspnetcore-runtime-7.0.5-win-x64'
+    'dotnet/aspnetcore-runtime-6.0.16-win-x86'
+    'dotnet/aspnetcore-runtime-6.0.16-win-x64'
+    'dotnet/aspnetcore-runtime-7.0.5-win-x86'
+    'dotnet/aspnetcore-runtime-7.0.5-win-x64'
     )
 
 for i in "${!zips[@]}"; 
 do 
-unzip -q ${zips[$i]} -d ${dirs[$i]} &
+unzip -q installers/${zips[$i]} -d installers/${dirs[$i]} &
 done
 wait
 
@@ -85,17 +85,17 @@ wait
 echo Cleaning up...
 
 torm=(
-    'installers/directx/directx_Jun2010_redist.exe'
-    'installers/directx/null'
-    'installers/dotnet/aspnetcore-runtime-6.0.16-win-x86.zip' 
-    'installers/dotnet/aspnetcore-runtime-6.0.16-win-x64.zip' 
-    'installers/dotnet/aspnetcore-runtime-7.0.5-win-x86.zip'
-    'installers/dotnet/aspnetcore-runtime-7.0.5-win-x64.zip'
+    'directx/directx_Jun2010_redist.exe'
+    'directx/null'
+    'dotnet/aspnetcore-runtime-6.0.16-win-x86.zip' 
+    'dotnet/aspnetcore-runtime-6.0.16-win-x64.zip' 
+    'dotnet/aspnetcore-runtime-7.0.5-win-x86.zip'
+    'dotnet/aspnetcore-runtime-7.0.5-win-x64.zip'
     )
 
 for i in "${!torm[@]}"; 
 do 
-rm ${torm[$i]} &
+rm installers/${torm[$i]} &
 done
 wait
 

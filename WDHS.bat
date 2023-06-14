@@ -73,6 +73,7 @@ start /wait installers/physx/PhysX_9.09.0428_SystemSoftware.exe /quiet
 
 echo Visual C++ Redistributable packages...
 start /wait installers/vcredist/vcredist_x64.exe /passive /norestart
+start /wait installers/vcredist/vcredist_x86.exe /passive /norestart
 
 goto END
 
