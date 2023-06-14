@@ -4,15 +4,15 @@
 
 ## Introduction
 
-Ever had issues launching or running Windows games or applications under Wine? If the answer is "Yes", then try these scripts I made; they should solve most issues you may encounter. And in case my script did make your experience worse, then feel free to create an issue here on GitHub so I can help you out.
+Ever had issues launching or running Windows games or applications under Wine? If the answer is "Yes", then try the scripts I made; it should solve most issues you may encounter. And in case my script did make your experience worse, then feel free to create an issue here on GitHub so I can help you out.
 
-Although I made these scripts primarily for games, this can help application compatibility as well. Adobe apps use some DirectX for rendering, and some programs are written using .NET. So feel free to try it out in that use case as well.
+Although I made the script primarily for games, this can help application compatibility as well. Adobe apps use some DirectX for rendering, and some programs are written using .NET. So feel free to try it out in that use case as well.
 
 Feel free to donate if you like my work or if I was of any help to you!
 
 ## Description
 
-This is a collection of scripts that function similarly to how Valve's installscript.vdf does. The said .vdf file installs Windows dependencies upon first launch for games to work properly. However, not all Steam games come with all the required dependencies installed, as well as non-Steam and abandonware games don't always come with these either. So I decided to write a universal script to install **every single dependency** any game may require to work. These scripts should work with any Wine version and prefix manager, including Steam.
+This is a script that functions similarly to how Valve's installscript.vdf does. The said .vdf file installs Windows dependencies upon first launch for games to work properly. However, not all Steam games come with all the required dependencies installed, as well as non-Steam and abandonware games don't always come with these either. So I decided to write a universal script to install **every single dependency** any game may require to work. This script should work with any Wine version and prefix manager, including Steam.
 
 ## Examples
 
@@ -27,7 +27,7 @@ Here are games that were fixed completely or partially after running this script
 
 ## Packages
 
-| Software | What it fixes |
+| Software | Fixes |
 |---|---|
 | [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109) | Video and audio playback, missing or broken UI and menus |
 | [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download) | Crashing installers |
