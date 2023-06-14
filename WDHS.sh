@@ -1,9 +1,10 @@
 #!/bin/bash
 
-echo Begining setup
-echo  
-
 clear
+
+echo Begining setup
+echo 
+
 cd "$(dirname "$0")"
 
 mkdir installers
