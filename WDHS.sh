@@ -214,3 +214,4 @@ echo
 
 read -p "Setup complete. Now you can run WDHS.bat with Wine within the required prefix. Press ENTER to close the terminal."  </dev/tty
 rm ./WDHS.sh
+exit
