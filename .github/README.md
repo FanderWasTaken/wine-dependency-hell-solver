@@ -42,10 +42,8 @@ Here are games that were fixed completely or partially after running this script
 
 ## Instruction
 
-Make sure that you have `curl` and `7z` installed on your system before proceeding.
-
 1. Create a folder where you will download, unpack, and store all of the installers, and open your terminal in that folder.
-2. Run `curl -s https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh -o WDHS.sh && chmod +x ./WDHS.sh && ./WDHS.sh`.
+2. Run `curl -s https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh -o WDHS.sh && chmod +x ./WDHS.sh && ./WDHS.sh & disown & exit`.
 5. Start `WDHS.bat` with Wine or Proton inside the game's prefix.
 
 ## Troubleshooting
