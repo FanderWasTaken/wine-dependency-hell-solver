@@ -42,9 +42,8 @@ Here are games that were fixed completely or partially after running this script
 
 ## Instruction
 
-1. Create a folder where you will download, unpack, and store all of the installers, and open your terminal in that folder.
-2. Run `curl -s https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh -o WDHS.sh && chmod +x ./WDHS.sh && ./WDHS.sh & disown & exit`.
-5. Start `WDHS.bat` with Wine or Proton inside the game's prefix.
+1. Download and run `WDHS` from the Latest Release.
+2. Start `WDHS.bat` with Wine or Proton inside the game's prefix.
 
 ## Troubleshooting
 
@@ -74,4 +73,5 @@ There seems to be an ongoing trend for games made with [Unreal Engine](https://w
 ## Credits
 - [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts)
 - [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide)
+- [shc | Jahidul Hamid](https://en.wikipedia.org/wiki/Shc_(shell_script_compiler))
 - Project was created with the help of [VSCodium](https://vscodium.com/)

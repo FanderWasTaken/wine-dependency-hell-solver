@@ -3,19 +3,18 @@
 clear
 
 zenity --info \
-    --text="Setup for WDHS is going to start now." \
+    --text="Setup for WDHS is going to start now.\nPlease choose a directory to place all WDHS files in." \
     --title="WDHS Installation"
 wait
 
+instd=`zenity --file-selection --directory`
+
 (
     echo "20"
+    echo "# Downloading Installers... \n𝙄𝙩 𝙢𝙖𝙮 𝙩𝙖𝙠𝙚 𝙖 𝙬𝙝𝙞𝙡𝙚.\n\nThe install path is: $instd\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
 
-    echo "# Downloading Installers... It may take a while."
-
-    cd "$(dirname "$0")"
-
-    mkdir installers
-    wait
+    mkdir -p $instd
+    cd $instd
 
     idirs=(
         'directx'
@@ -26,7 +25,7 @@ wait
     )
 
     for i in "${!idirs[@]}"; do
-        mkdir installers/${idirs[$i]} &
+        mkdir -p installers/${idirs[$i]} &
     done
     wait
 
@@ -61,8 +60,7 @@ wait
     wait
 
     echo "40"
-
-    echo "# Extracting files..."
+    echo "# Extracting files...\n\nThe install path is: $instd\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
 
     7z x -oinstallers/directx/ installers/directx/directx_Jun2010_redist.exe -y >installers/directx/null
 
@@ -85,8 +83,7 @@ wait
     wait
 
     echo "60"
-
-    echo "# Cleaning up..."
+    echo "# Cleaning up...\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
 
     torm=(
         'directx/directx_Jun2010_redist.exe'
@@ -104,7 +101,7 @@ wait
 
     echo "70"
 
-    echo "# Creating the WDHS.bat..."
+    echo "# Creating the WDHS.bat...\n\nThe install path is: $instd\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
 
     echo '@echo off' >WDHS.bat
     wait
@@ -172,16 +169,14 @@ wait
 ) |
     zenity --progress \
         --title="WDHS Installation" \
-        --text="Starting installation..." \
+        --text="Starting installation...\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" \
         --percentage=0 \
         --auto-close \
         --auto-kill \
         --time-remaining
 
 (($? != 100)) && zenity --info \
-    --text="Setup has been completed successfully! \nNow you can run WDHS.bat with Wine, Lutris, or Protontricks." \
+    --text="Setup has been completed successfully!\nNow you can run $instd/WDHS.bat with Wine, Lutris, or Protontricks.\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" \
     --title="WDHS Installation"
 wait
-
-rm ./WDHS.sh
 exit
