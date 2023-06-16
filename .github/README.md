@@ -42,8 +42,9 @@ Here are games that were fixed completely or partially after running this script
 
 ## Instruction
 
-1. Download and run `WDHS` from the Latest Release.
-2. Start `WDHS.bat` with Wine or Proton inside the game's prefix.
+1. Download `WDHS` from the Latest Release.
+2. Make the downloaded file executable via right click Properties menu.<br />Alternatively, run `chmod +x ./WDHS` in the same directory.
+3. Start `WDHS.bat` with Wine or Proton inside the game's prefix.
 
 ## Troubleshooting
 
