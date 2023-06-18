@@ -44,7 +44,8 @@ Here are games that were fixed completely or partially after running this script
 
 1. Download `WDHS` from the [Latest Release](https://github.com/FanderWasTaken/wine-dependency-hell-solver/releases/latest).
 2. Make the downloaded file executable via right click Properties menu.<br />Alternatively, run `chmod +x ./WDHS` in the same directory.
-3. Start `WDHS.bat` with Wine or Proton inside the game's prefix.
+3. Run WDHS by double clicking the file or running `./WDHS` in your terminal.
+4. Start `WDHS.bat` with Wine or Proton inside the game's prefix.
 
 ## Troubleshooting
 
