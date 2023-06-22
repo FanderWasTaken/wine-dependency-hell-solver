@@ -65,6 +65,8 @@ If you wish to import your [Lutris](https://lutris.net/) games to Steam with the
 
 [DXVK](https://github.com/doitsujin/dxvk) can cause stuttering while playing a game for the first time, which ruins the experience. In order to minimize the amount of stuttering, run `sudo nano /etc/profile.d/gpl.sh` add this line: `RADV_PERFTEST=gpl`. Press `CTRL+O` to save changes and `CTRL+X` to exit. Reboot to apply the changes.
 
+If you encounter screen tearing on X, make sure to follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
+
 ## Issues unresolved
 
 There seems to be an ongoing trend for games made with [Unreal Engine](https://www.unrealengine.com/en-US) to stutter incessantly, regardless of whether a shader compilation screen is present or not. In my testing, the stuttering issues occur with Unreal Engine 3 and upwards. [dxvk-gplasync](https://gitlab.com/Ph42oN/dxvk-gplasync) can be used as a hacky workaround, although it's not recommended as it has a low success rate at fixing the stuttering issue. Games that are known to exhibit this kind of behavior are: A Hat in Time, Remember Me, SIFU, Dead Space (2023), Callisto Protocol, Star Wars Jedi: Survivor, and probably more. The only real solution to this problem currently seems to be to not play games made with the Unreal Engine.
