@@ -55,7 +55,7 @@ Before opening an issue, make sure to try different [Wine](https://www.winehq.or
 
 If you are using [Lutris](https://lutris.net/), go into `Preferences`, `Global Options` for **Wine runner** and make sure to have `Disable Lutris Runtime` and `Prefer system libraries` enabled (switched on).
 
-Also, I personally recommend you install `gamescope` package from your distribution and use it with games. [Gamescope](https://github.com/ValveSoftware/gamescope) can fix screen-tearing and lower overall input latency during gameplay. It can be enabled via [Lutris](https://lutris.net/)' `Preferences`, `System Options` menus. For Steam games, add `gamescope -f -e -h [your screen resolution, e.g. 1080] -r [optional framerate cap, e.g. 60] -- %command%` as a launch option.
+Also, I personally recommend you install `gamescope` package from your distribution and use it with games. [Gamescope](https://github.com/ValveSoftware/gamescope) can fix screen-tearing and lower overall input latency during gameplay. It can be enabled via [Lutris](https://lutris.net/)' `Preferences`, `System Options` menus. For Steam games, add `gamescope -f -e -h [your screen resolution, e.g. 1080] -r [optional framerate cap, e.g. 60] --force-windows-fullscreen -- %command%` as a launch option.
 
 Windows uses virtual memory in weird ways. The default Linux limit on virtual memory is likely to be too low, which may result in game crashes. You can increase virtual memory permanently. Update the `vm.max_map_count=262144` setting in `/etc/sysctl.conf`. To verify after rebooting, run `sysctl vm.max_map_count`.
 
