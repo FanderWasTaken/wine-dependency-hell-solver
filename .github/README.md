@@ -75,4 +75,4 @@ There seems to be an ongoing trend for games made with [Unreal Engine](https://w
 ## Credits
 - [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts)
 - [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide)
-- Project was created with the help of [VSCodium](https://vscodium.com/)
+- Project was created with the help of [Visual Studio Code](https://code.visualstudio.com/)
