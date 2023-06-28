@@ -36,14 +36,26 @@ Here are games that were fixed completely or partially after running this script
 | [Visual C++ Redistributable packages](https://www.microsoft.com/en-us/download/details.aspx?id=30679) | Various crashes and missing .dll issues |
 
 
-**Disclaimer**: Though my script installs Media Foundation dependencies you may still exhibit unwanted behavior.
+**Disclaimer**: Though my script installs Media Foundation you may still exhibit unwanted behavior.
 
 **All installers are taken directly from official sources.**
 
-## Instruction
+## Instructions
+
+Make sure to have the following packages installed before proceeding: `7z curl zenity`
 
 1. Run `bash <(curl -sSL https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)` in your terminal.
-2. Start `WDHS.bat` with Wine or Proton inside the game's prefix.
+2. Start `WDHS.bat` with [Protontricks](https://github.com/Matoking/protontricks) by double clicking it or via Lutris.
+
+
+
+<details>
+    <summary><i>Lutris instructions</i></summary>
+      
+![lutris step one](lutris_1.png)
+
+![lutris step two](lutris_2.png)
+</details>
 
 ## Troubleshooting
 
@@ -51,21 +63,15 @@ Before opening an issue, make sure to try different [Wine](https://www.winehq.or
 
 ## Additional tips
 
-[Protontricks](https://github.com/Matoking/protontricks) can be used to execute `WDHS.bat` with a double click and applied to any Steam game you have installed.
-
-If you are using [Lutris](https://lutris.net/), go into `Preferences`, `Global Options` for **Wine runner** and make sure to have `Disable Lutris Runtime` and `Prefer system libraries` enabled (switched on).
-
-Also, I personally recommend you install `gamescope` package from your distribution and use it with games. [Gamescope](https://github.com/ValveSoftware/gamescope) can fix screen-tearing and lower overall input latency during gameplay. It can be enabled via [Lutris](https://lutris.net/)' `Preferences`, `System Options` menus. For Steam games, add `gamescope -f -e -h [your screen resolution, e.g. 1080] -r [optional framerate cap, e.g. 60] --force-windows-fullscreen -- %command%` as a launch option.
-
-Windows uses virtual memory in weird ways. The default Linux limit on virtual memory is likely to be too low, which may result in game crashes. You can increase virtual memory permanently. Update the `vm.max_map_count=262144` setting in `/etc/sysctl.conf`. To verify after rebooting, run `sysctl vm.max_map_count`.
+Windows uses virtual memory in weird ways. The default Linux limit on virtual memory is likely to be too low, which may result in game crashes. To increase virtual memory add the `vm.max_map_count=1048576` to the `/etc/sysctl.conf`.
 
 If you're using an integrated GPU, e.g. Vega of Intel, go into your BIOS and set a fixed amount of memory allocated towards your GPU, don't leave that setting on Auto as it will cause more "Out of Memory" errors. And if you have both discreet and integrated GPUs then make sure that your BIOS' preferences are set to prioritize PCI-E GPU over the integrated one.
 
-If you wish to import your [Lutris](https://lutris.net/) games to Steam with the least amount of headaches, use [Steam ROM Manager](https://github.com/SteamGridDB/steam-rom-manager). Despite its name, SRM can import data from `.desktop` application shortcut. How does it differ from importing games directly from Lutris? It allows you to add custom artwork for games, sourced from [SteamGridDB](https://www.steamgriddb.com/). Create a new Parser and use `Non Steam Shortcuts` as a template. Add `*/${title}@(.desktop|.DESKTOP)` as `User's glob` parameter and lead `ROMs directory` to the path you have your games installed. Create a desktop shortcut for your game from Lutris and place `.desktop` shortcut into your game's directory. Save, go to `Preview` and press `Parse`.
+You can use [Steam ROM Manager](https://github.com/SteamGridDB/steam-rom-manager) if you wish to import your [Lutris](https://lutris.net/) games to Steam with the least amount of headaches. Despite its name, SRM can import data from `.desktop` application shortcut. How does it differ from importing games directly from Lutris? It allows you to add custom artwork for games, sourced from [SteamGridDB](https://www.steamgriddb.com/). Create a new Parser and use `Non Steam Shortcuts` as a template. Add `*/${title}@(.desktop|.DESKTOP)` as `User's glob` parameter and lead `ROMs directory` to the path you have your games installed. Create a desktop shortcut for your game from Lutris and place `.desktop` shortcut into your game's directory. Save, go to `Preview`, press `Parse` and add your games with desired artwork.
 
-[DXVK](https://github.com/doitsujin/dxvk) can cause stuttering while playing a game for the first time, which ruins the experience. In order to minimize the amount of stuttering, run `sudo nano /etc/profile.d/gpl.sh` add this line: `RADV_PERFTEST=gpl`. Press `CTRL+O` to save changes and `CTRL+X` to exit. Reboot to apply the changes.
+I personally recommend you install `gamescope` package from your distribution and use it with games. [Gamescope](https://github.com/ValveSoftware/gamescope) can fix screen-tearing and lower overall input latency during gameplay. It can be enabled via [Lutris](https://lutris.net/)' `Preferences`, `System Options` menus. For Steam games, add `gamescope -f -e -h [your screen resolution, e.g. 1080] -r [optional framerate cap, e.g. 60] --force-windows-fullscreen [optional, forces game window to stretch to fullscreen] -- %command%` as a launch option. To reduce screen tearing on X even further, make sure to follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
 
-If you encounter screen tearing on X, make sure to follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
+[DXVK](https://github.com/doitsujin/dxvk) can cause stuttering while playing a game for the first time, which ruins the experience. In order to minimize the amount of stuttering, open `/etc/profile.d/gpl.sh` with a text editor and add this line: `RADV_PERFTEST=gpl`. Reboot to apply the changes. **Please note that Mesa 23.1 and newer has this setting set by default, so no further action is required.**
 
 ## Issues unresolved
 
