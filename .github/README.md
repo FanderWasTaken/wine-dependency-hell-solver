@@ -63,6 +63,8 @@ Before opening an issue, make sure to try different [Wine](https://www.winehq.or
 
 Windows uses virtual memory in weird ways. The default Linux limit on virtual memory is likely to be too low, which may result in game crashes. To increase virtual memory add the `vm.max_map_count=1048576` to the `/etc/sysctl.conf`.
 
+When using Lutris, make sure to go into Wine runner settings and disable `DXVK-NVAPI DLSS` emulation if you aren't using an NVIDIA card as it can cause games to crash.
+
 If you're using an integrated GPU, e.g. Vega of Intel, go into your BIOS and set a fixed amount of memory allocated towards your GPU, don't leave that setting on Auto as it will cause more "Out of Memory" errors. And if you have both discreet and integrated GPUs then make sure that your BIOS' preferences are set to prioritize PCI-E GPU over the integrated one.
 
 You can use [Steam ROM Manager](https://github.com/SteamGridDB/steam-rom-manager) if you wish to import your [Lutris](https://lutris.net/) games to Steam with the least amount of headaches. Despite its name, SRM can import data from `.desktop` application shortcuts. How does it differ from importing games directly from Lutris? It allows you to add custom artwork for games, sourced from [SteamGridDB](https://www.steamgriddb.com/). Create a new Parser and use `Non Steam Shortcuts` as a template. Add `*/${title}@(.desktop|.DESKTOP)` as `User's glob` parameter and lead `ROMs directory` to the path where you have your games installed. Create a desktop shortcut for your game from Lutris and place `.desktop` shortcut into your game's directory. Save, go to `Preview`, press `Parse` and add your games with desired artwork.
