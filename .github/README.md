@@ -59,24 +59,33 @@ Make sure to have the following packages installed before proceeding: `7z curl z
 
 Before opening an issue, make sure to try different [Wine](https://www.winehq.org/) or [Proton](https://github.com/ValveSoftware/Proton) versions. The recommended path is to go from the newest release down to the oldest. **Please note that not every game will work with Wine as expected**.
 
-## Additional tips
+## Additional fixes and improvements
 
-Windows uses virtual memory in weird ways. The default Linux limit on virtual memory is likely to be too low, which may result in game crashes. To increase virtual memory add the `vm.max_map_count=1048576` to the `/etc/sysctl.conf`.
+### Crashes
 
-When using Lutris, make sure to go into Wine runner settings and disable `DXVK-NVAPI DLSS` emulation if you aren't using an NVIDIA card as it can cause games to crash.
+If you're using an integrated GPU, set a fixed amount of memory allocated towards your GPU in your BIOS, don't leave it on Auto. And if you have both discreet and integrated GPUs then make sure that your BIOS' preferences are set to prioritize PCI-E GPU over the integrated one.
 
-If you're using an integrated GPU, e.g. Vega of Intel, go into your BIOS and set a fixed amount of memory allocated towards your GPU, don't leave that setting on Auto as it will cause more "Out of Memory" errors. And if you have both discreet and integrated GPUs then make sure that your BIOS' preferences are set to prioritize PCI-E GPU over the integrated one.
+The default Linux limit on virtual memory is pretty low. Add the `vm.max_map_count=1048576` to the `/etc/sysctl.conf` to increase that limit.
 
-You can use [Steam ROM Manager](https://github.com/SteamGridDB/steam-rom-manager) if you wish to import your [Lutris](https://lutris.net/) games to Steam with the least amount of headaches. Despite its name, SRM can import data from `.desktop` application shortcuts. How does it differ from importing games directly from Lutris? It allows you to add custom artwork for games, sourced from [SteamGridDB](https://www.steamgriddb.com/). Create a new Parser and use `Non Steam Shortcuts` as a template. Add `*/${title}@(.desktop|.DESKTOP)` as `User's glob` parameter and lead `ROMs directory` to the path where you have your games installed. Create a desktop shortcut for your game from Lutris and place `.desktop` shortcut into your game's directory. Save, go to `Preview`, press `Parse` and add your games with desired artwork.
-
-I personally recommend you install `gamescope` package from your distribution and use it with games. [Gamescope](https://github.com/ValveSoftware/gamescope) can fix screen-tearing and lower overall input latency during gameplay. It can be enabled via [Lutris](https://lutris.net/)' `Preferences`, `System Options` menus. For Steam games, add `gamescope -f -e -h [your screen resolution, e.g. 1080] -r [optional framerate cap, e.g. 60] --force-windows-fullscreen [optional, forces game window to stretch to fullscreen] -- %command%` as a launch option. To further reduce screen tearing on X11, make sure to follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
-
-[DXVK](https://github.com/doitsujin/dxvk) can cause stuttering while playing a game for the first time, which ruins the experience. In order to minimize the amount of stuttering, add `RADV_PERFTEST=gpl` to `/etc/profile.d/gpl.sh` with a text editor, reboot to apply the changes. **Mesa 23.1 and newer has this variable set by default.**
+### Audio
 
 Sometimes it's possible to hear audio crackling or sound cutting out during gameplay. To remedy this add `PULSE_LATENCY_MSEC=60` to `/etc/profile.d/pulselatency.sh`. Also make sure that your system is not using PipeWire and WirePlumber, switch to PulseAudio instead as it seems to cause less issues.
 
-There seems to be an ongoing trend for games made with [Unreal Engine](https://www.unrealengine.com/en-US) to stutter incessantly. [dxvk-gplasync](https://gitlab.com/Ph42oN/dxvk-gplasync/-/releases) can be used as a workaround. Be sure to read [instructions provided by the developer](https://gitlab.com/Ph42oN/dxvk-gplasync#options).
+### Game Feel
 
+[Gamescope](https://github.com/ValveSoftware/gamescope) can reduce screen-tearing and lower overall input latency during gameplay. Add `gamescope -f -e -h [your screen vertical resolution, e.g. 1080] -r [optional framerate cap, e.g. 60] -- %command%` as a launch option in Steam. 
+
+To reduce screen tearing on X11 further, make sure to follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
+
+[DXVK](https://github.com/doitsujin/dxvk) can cause stuttering while playing a game for the first time, which ruins the experience. In order to minimize the amount of stuttering, add `RADV_PERFTEST=gpl` to `/etc/profile.d/gpl.sh` with a text editor, reboot to apply the changes. **Mesa 23.1 and newer has this variable set by default.** For games made with [Unreal Engine](https://www.unrealengine.com/en-US) plesae use [dxvk-gplasync](https://gitlab.com/Ph42oN/dxvk-gplasync/-/releases). Be sure to read [instructions provided by the developer](https://gitlab.com/Ph42oN/dxvk-gplasync#options) on how to use it.
+
+### Lutris
+
+When using Lutris, make sure to go into Wine runner settings and disable `DXVK-NVAPI DLSS emulation` as it can cause games to crash.
+
+Gamescope can be enabled via Lutris' `Preferences`, `System Options` menus.
+
+You can use [Steam ROM Manager](https://github.com/SteamGridDB/steam-rom-manager) if you wish to import your Lutris games to Steam with the least amount of headaches. Despite its name, SRM can import data from `.desktop` application shortcuts. It also allows you to add custom artwork for games, sourced from [SteamGridDB](https://www.steamgriddb.com/). Create a new Parser and use `Non Steam Shortcuts` as a template. Add `*/${title}@(.desktop|.DESKTOP)` as `User's glob` parameter and lead `ROMs directory` to the path where you have your games installed. Create a desktop shortcut for your game from Lutris and place `.desktop` shortcut into your game's directory. Save, go to `Preview`, press `Parse` and add your games with desired artwork.
 
 ## Credits
 - [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts)
