@@ -4,11 +4,7 @@
 
 ## Introduction
 
-Ever had issues launching or running Windows games or applications under Wine? If the answer is "Yes", then try the scripts I made; it should solve most issues you may encounter. And in case my script did make your experience worse, then feel free to create an issue here on GitHub so I can help you out.
-
-Although I made the script primarily for games, this can help application compatibility as well. Adobe apps use some DirectX for rendering, and some programs are written using .NET. So feel free to try it out in that use case as well.
-
-Feel free to donate if you like my work or if I was of any help to you!
+Ever had issues launching or running Windows games or applications under Wine? If the answer is "Yes", then try the scripts I made, it should solve most issues you may encounter. 
 
 ## Description
 
@@ -55,10 +51,6 @@ Make sure to have the following packages installed before proceeding: `7z curl z
 ![lutris step two](lutris_2.png)
 </details>
 
-## Troubleshooting
-
-Before opening an issue, make sure to try different [Wine](https://www.winehq.org/) or [Proton](https://github.com/ValveSoftware/Proton) versions. The recommended path is to go from the newest release down to the oldest. **Please note that not every game will work with Wine as expected**.
-
 ## Additional fixes and improvements
 
 ### Crashes
@@ -66,6 +58,8 @@ Before opening an issue, make sure to try different [Wine](https://www.winehq.or
 If you're using an integrated GPU, set a fixed amount of memory allocated towards your GPU in your BIOS, don't leave it on Auto. And if you have both discreet and integrated GPUs then make sure that your BIOS' preferences are set to prioritize PCI-E GPU over the integrated one.
 
 The default Linux limit on virtual memory is pretty low. Add the `vm.max_map_count=1048576` to the `/etc/sysctl.conf` to increase that limit.
+
+Try running games with [proton-ge-custom](https://github.com/GloriousEggroll/proton-ge-custom) or [wine-ge-custom](https://github.com/GloriousEggroll/wine-ge-custom). [ProtonUp-Qt](https://davidotek.github.io/protonup-qt/) offers the easies way to install these.
 
 ### Audio
 
@@ -91,3 +85,7 @@ You can use [Steam ROM Manager](https://github.com/SteamGridDB/steam-rom-manager
 - [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts)
 - [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide)
 - Project was created with the help of [Visual Studio Code](https://code.visualstudio.com/)
+
+---
+
+Feel free to donate if you like my work or if I was of any help to you!
