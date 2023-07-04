@@ -73,11 +73,9 @@ I personally recommend you install `gamescope` package from your distribution an
 
 [DXVK](https://github.com/doitsujin/dxvk) can cause stuttering while playing a game for the first time, which ruins the experience. In order to minimize the amount of stuttering, add `RADV_PERFTEST=gpl` to `/etc/profile.d/gpl.sh` with a text editor, reboot to apply the changes. **Mesa 23.1 and newer has this variable set by default.**
 
-Sometimes it's possible to hear audio crackling or sound cutting out during gameplay. To remedy this add `PULSE_LATENCY_MSEC=60` to `/etc/profile.d/pulselatency.sh`.
+Sometimes it's possible to hear audio crackling or sound cutting out during gameplay. To remedy this add `PULSE_LATENCY_MSEC=60` to `/etc/profile.d/pulselatency.sh`. Also make sure that your system is not using PipeWire and WirePlumber, switch to PulseAudio instead as it seems to cause less issues.
 
-## Issues unresolved
-
-There seems to be an ongoing trend for games made with [Unreal Engine](https://www.unrealengine.com/en-US) to stutter incessantly, regardless of whether a shader compilation screen is present or not. In my testing, the stuttering issues occur with Unreal Engine 3 and upwards. [dxvk-gplasync](https://gitlab.com/Ph42oN/dxvk-gplasync) can be used as a hacky workaround, although it's not recommended as it has a low success rate at fixing the stuttering issue. Games that are known to exhibit this kind of behavior are: A Hat in Time, Remember Me, SIFU, Dead Space (2023), Callisto Protocol, Star Wars Jedi: Survivor, and probably more. The only real solution to this problem currently seems to be to not play games made with the Unreal Engine.
+There seems to be an ongoing trend for games made with [Unreal Engine](https://www.unrealengine.com/en-US) to stutter incessantly. [dxvk-gplasync](https://gitlab.com/Ph42oN/dxvk-gplasync/-/releases) can be used as a workaround. Be sure to read [instructions provided by the developer](https://gitlab.com/Ph42oN/dxvk-gplasync#options).
 
 
 ## Credits
