@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Ever had issues launching or running Windows games or applications under Wine? If the answer is "Yes", then try the scripts I made, it should solve most issues you may encounter. 
+Ever had issues launching or running Windows games or applications under Wine? If the answer is "Yes", then try the scripts I made, it should solve most issues you may encounter.
 
 ## Description
 
@@ -23,14 +23,13 @@ Here are games that were fixed completely or partially after running this script
 
 ## Packages
 
-| Software | Fixes |
-|---|---|
-| [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109) | Video and audio playback, missing or broken UI and menus |
-| [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download) | Crashing installers |
-| [Media Foundation](https://github.com/z0z0z/mf-installcab) | Some cases of video playback |
-| [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/) | Games crashing when relying heavily on the technology |
-| [Visual C++ Redistributable packages](https://www.microsoft.com/en-us/download/details.aspx?id=30679) | Various crashes and missing .dll issues |
-
+| Software                                                                                              | Fixes                                                    |
+| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109)            | Video and audio playback, missing or broken UI and menus |
+| [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download)                                   | Crashing installers                                      |
+| [Media Foundation](https://github.com/z0z0z/mf-installcab)                                            | Some cases of video playback                             |
+| [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)            | Games crashing when relying heavily on the technology    |
+| [Visual C++ Redistributable packages](https://www.microsoft.com/en-us/download/details.aspx?id=30679) | Various crashes and missing .dll issues                  |
 
 **Disclaimer**: Though my script installs Media Foundation you may still exhibit unwanted behavior.
 
@@ -49,39 +48,39 @@ Make sure to have the following packages installed before proceeding: `7z curl z
 ![lutris step one](lutris_1.png)
 
 ![lutris step two](lutris_2.png)
+
 </details>
 
 ## Additional fixes and improvements
 
-### Crashes
+### Stability
 
 If you're using an integrated GPU, set a fixed amount of memory allocated towards your GPU in your BIOS, don't leave it on Auto. And if you have both discreet and integrated GPUs then make sure that your BIOS' preferences are set to prioritize PCI-E GPU over the integrated one.
 
 The default Linux limit on virtual memory is pretty low. Add the `vm.max_map_count=1048576` to the `/etc/sysctl.conf` to increase that limit.
 
-Try running games with [proton-ge-custom](https://github.com/GloriousEggroll/proton-ge-custom) or [wine-ge-custom](https://github.com/GloriousEggroll/wine-ge-custom). [ProtonUp-Qt](https://davidotek.github.io/protonup-qt/) offers the easies way to install these.
-
 ### Audio
 
 Sometimes it's possible to hear audio crackling or sound cutting out during gameplay. To remedy this add `PULSE_LATENCY_MSEC=60` to `/etc/profile.d/pulselatency.sh`. Also make sure that your system is not using PipeWire and WirePlumber, switch to PulseAudio instead as it seems to cause less issues.
 
-### Game Feel
+### Jittering
 
-[Gamescope](https://github.com/ValveSoftware/gamescope) can reduce screen-tearing and lower overall input latency during gameplay. Add `gamescope -f -e -h [your screen vertical resolution, e.g. 1080] -r [optional framerate cap, e.g. 60] -- %command%` as a launch option in Steam. 
+To reduce screen tearing on X11, make sure to follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
 
-To reduce screen tearing on X11 further, make sure to follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
+[DXVK](https://github.com/doitsujin/dxvk) can cause stuttering while playing a game for the first time, which ruins the experience. In order to minimize the amount of stuttering, add `RADV_PERFTEST=gpl` to `/etc/profile.d/gpl.sh` with a text editor, reboot to apply the changes. **Mesa 23.1 and newer has this variable set by default.**
 
-[DXVK](https://github.com/doitsujin/dxvk) can cause stuttering while playing a game for the first time, which ruins the experience. In order to minimize the amount of stuttering, add `RADV_PERFTEST=gpl` to `/etc/profile.d/gpl.sh` with a text editor, reboot to apply the changes. **Mesa 23.1 and newer has this variable set by default.** For games made with [Unreal Engine](https://www.unrealengine.com/en-US) plesae use [dxvk-gplasync](https://gitlab.com/Ph42oN/dxvk-gplasync/-/releases). Be sure to read [instructions provided by the developer](https://gitlab.com/Ph42oN/dxvk-gplasync#options) on how to use it.
+For games made with [Unreal Engine](https://www.unrealengine.com/en-US) plesae follow guides on PCGamingWiki for [UE3](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_4) and [UE4](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_4) to fix the stuttering issue.
 
-### Lutris
+### Lutris integration into Steam
 
-When using Lutris, make sure to go into Wine runner settings and disable `DXVK-NVAPI DLSS emulation` as it can cause games to crash.
+Make sure to go into settings and disable `DXVK-NVAPI DLSS emulation` for the Wine runner and `Lutris Runtime` globally as they can cause games to crash or provide suboptimal results.
 
-Gamescope can be enabled via Lutris' `Preferences`, `System Options` menus.
+[Gamescope](https://github.com/ValveSoftware/gamescope) should be used to fix Steam Overlay and Steam Input not working for non-steam games. It can be enabled via `Preferences`, `System Options` menus.
 
 You can use [Steam ROM Manager](https://github.com/SteamGridDB/steam-rom-manager) if you wish to import your Lutris games to Steam with the least amount of headaches. Despite its name, SRM can import data from `.desktop` application shortcuts. It also allows you to add custom artwork for games, sourced from [SteamGridDB](https://www.steamgriddb.com/). Create a new Parser and use `Non Steam Shortcuts` as a template. Add `*/${title}@(.desktop|.DESKTOP)` as `User's glob` parameter and lead `ROMs directory` to the path where you have your games installed. Create a desktop shortcut for your game from Lutris and place `.desktop` shortcut into your game's directory. Save, go to `Preview`, press `Parse` and add your games with desired artwork.
 
 ## Credits
+
 - [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts)
 - [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide)
 - Project was created with the help of [Visual Studio Code](https://code.visualstudio.com/)
