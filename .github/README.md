@@ -4,22 +4,22 @@
 
 ## Introduction
 
-Ever had issues launching or running Windows games or applications under Wine? If the answer is "Yes", then try the scripts I made, it should solve most issues you may encounter.
+If you ever had issues launching or running Windows games or applications under Wine, then try the script I made, it should solve most issues you may encounter.
 
 ## Description
 
-This is a script that functions similarly to how Valve's installscript.vdf does. The said .vdf file installs Windows dependencies upon first launch for games to work properly. However, not all Steam games come with all the required dependencies installed, as well as non-Steam and abandonware games don't always come with these either. So I decided to write a universal script to install **every single dependency** any game may require to work. This script should work with any Wine version and prefix manager, including Steam.
+This is a script that functions similarly to how Valve's installscript.vdf does. It installs Windows dependencies for games to work properly. However, not every game comes with all the required dependencies. So I decided to write a universal script to install **every single dependency** any game may require to work.
 
 ## Examples
 
-Here are games that were fixed completely or partially after running this script:
+Here are games that were fixed partially or completely after running this script:
 
-- [Call of Juarez: Bound in Blood](https://github.com/ValveSoftware/Proton/issues/1831) - Various issues related to sound and video playback.
-- [Darksiders](https://github.com/ValveSoftware/Proton/issues/264) - Game renders empty screen instead of the main menu, in-game UI and cut-scenes.
-- [Mortal Kombat Komplete Edition](https://github.com/ValveSoftware/Proton/issues/1185) - The main issue is an empty screen you get when trying to choose a character.
-- [Tell Me Why](https://github.com/ValveSoftware/Proton/issues/6829) - Crashes during certain cut-scenes.
-- [The Darkness II](https://github.com/ValveSoftware/Proton/issues/563) - Voice over is missing.
-- [Warhammer 40,000: Boltgun](https://github.com/ValveSoftware/Proton/issues/6795) - Has broken cut-scenes or missing audio during these cut-scenes.
+- [Call of Juarez: Bound in Blood](https://github.com/ValveSoftware/Proton/issues/1831) - Issues with sound and video playback.
+- [Darksiders](https://github.com/ValveSoftware/Proton/issues/264) - Missing main menu, in-game UI and cut-scenes.
+- [Mortal Kombat Komplete Edition](https://github.com/ValveSoftware/Proton/issues/1185) - Broken character select screen.
+- [Tell Me Why](https://github.com/ValveSoftware/Proton/issues/6829) - Cut-scenes crashes.
+- [The Darkness II](https://github.com/ValveSoftware/Proton/issues/563) - Missing voice over.
+- [Warhammer 40,000: Boltgun](https://github.com/ValveSoftware/Proton/issues/6795) - Broken cut-scenes.
 
 ## Packages
 
@@ -53,23 +53,30 @@ Make sure to have the following packages installed before proceeding: `7z curl z
 
 ## Additional fixes and improvements
 
-If you're using an integrated GPU, set a fixed amount of memory allocated towards it in your BIOS, don't leave it on Auto. And if you have both discreet and integrated GPUs then make sure that your BIOS' preferences are set to prioritize PCI-E GPU over the integrated one.
+If you're using an integrated GPU, set a fixed amount of memory allocated towards it in your BIOS. And if you have both discreet and integrated GPUs then make sure that your BIOS' preferences are set to prioritize PCI-E GPU over the integrated one.
 
 The default Linux limit on virtual memory is pretty low. Add the `vm.max_map_count=1048576` to the `/etc/sysctl.conf` to increase that limit.
 
-Sometimes it's possible to hear audio crackling or sound cutting out during gameplay. To remedy this add `PULSE_LATENCY_MSEC=60` to `/etc/profile.d/pulselatency.sh`. Also make sure that your system is not using PipeWire and WirePlumber, switch to PulseAudio instead as it seems to cause less issues.
+To remedy various audio issues, such as crackling, add `PULSE_LATENCY_MSEC=60` to `/etc/profile.d/pulselatency.sh` and make sure that your system is not using PipeWire and WirePlumber, switch to PulseAudio instead as it seems to cause less issues.
 
 To reduce screen tearing on X11, make sure to follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
 
 [DXVK](https://github.com/doitsujin/dxvk) can cause stuttering while playing a game for the first time, which ruins the experience. In order to minimize the amount of stuttering, add `RADV_PERFTEST=gpl` to `/etc/profile.d/gpl.sh` with a text editor, reboot to apply the changes. **Mesa 23.1 and newer has this variable set by default.**
 
-For games made with [Unreal Engine](https://www.unrealengine.com/en-US) plesae follow guides on PCGamingWiki for [UE3](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_4) and [UE4](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_4) to fix the stuttering issue.
+For games made with [Unreal Engine](https://www.unrealengine.com/en-US) please follow guides on PCGamingWiki for [UE3](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_4) and [UE4](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_4) to fix the stuttering issue.
 
 ## Lutris integration into Steam
 
-Make sure to go into settings and disable `DXVK-NVAPI DLSS emulation` for the Wine runner and `Lutris Runtime` globally as they can cause games to crash or provide suboptimal results.
+Make sure to go into settings and disable `DXVK-NVAPI DLSS emulation` for the Wine runner as it can cause games to crash or provide suboptimal results.
 
-You can use [Steam ROM Manager](https://github.com/SteamGridDB/steam-rom-manager) if you wish to import your Lutris games to Steam with the least amount of headaches. Despite its name, SRM can import data from `.desktop` application shortcuts. It also allows you to add custom artwork for games, sourced from [SteamGridDB](https://www.steamgriddb.com/). Create a new Parser and use `Non Steam Shortcuts` as a template. Add `*/${title}@(.desktop|.DESKTOP)` as `User's glob` parameter and lead `ROMs directory` to the path where you have your games installed. Create a desktop shortcut for your game from Lutris and place `.desktop` shortcut into your game's directory. Save, go to `Preview`, press `Parse` and add your games with desired artwork.
+You can use [Steam ROM Manager](https://github.com/SteamGridDB/steam-rom-manager) if you wish to import your Lutris games to Steam with the least amount of headaches. Despite its name, SRM can import data from `.desktop` application shortcuts. It also allows you to add custom artwork for games, sourced from [SteamGridDB](https://www.steamgriddb.com/).
+
+<details>
+    <summary>Lutris parser guide</summary>
+      
+Create a new Parser and use `Non Steam Shortcuts` as a template. Add `*/${title}@(.desktop|.DESKTOP)` as `User's glob` parameter and lead `ROMs directory` to the path where you have your games installed. Create a desktop shortcut for your game from Lutris and place `.desktop` shortcut into your game's directory. Save, go to `Preview`, press `Parse` and add your games with desired artwork.
+
+</details>
 
 ## Credits
 
