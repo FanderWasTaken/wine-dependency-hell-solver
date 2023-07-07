@@ -40,8 +40,8 @@ Here are games that were fixed partially or completely after running this script
 Make sure to have the following packages installed before proceeding: `7z curl zenity`
 
 1. Run `bash <(curl -sSL https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)` in your terminal.
-3. Optionally you can also run `bash <(curl -sSL https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/SystemTweaks.sh)` to apply some system tweaks to improve your gaming experience.
-2. Start `WDHS.bat` with [Protontricks](https://github.com/Matoking/protontricks) by double clicking it or via Lutris.
+2. Optionally you can also run `bash <(curl -sSL https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/SystemTweaks.sh)` to apply some system tweaks to improve your gaming experience.
+3. Start `WDHS.bat` with [Protontricks](https://github.com/Matoking/protontricks) by double clicking it or via Lutris.
 
 <details>
     <summary>Lutris instructions</summary>
