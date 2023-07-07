@@ -53,7 +53,7 @@ Make sure to have the following packages installed before proceeding: `7z curl z
 
 ## Additional fixes and improvements
 
-You can run the following commands to improve your experience:
+You can run the following commands to improve your experience, reboot to apply these changes:
 
 - Fixes 'out of memory' crashes<br>
 `sudo echo 'vm.max_map_count=1048576' >>/etc/sysctl.conf`<br>
