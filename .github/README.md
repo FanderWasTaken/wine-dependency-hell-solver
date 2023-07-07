@@ -40,8 +40,7 @@ Here are games that were fixed partially or completely after running this script
 Make sure to have the following packages installed before proceeding: `7z curl zenity`
 
 1. Run `bash <(curl -sSL https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)` in your terminal.
-2. Optionally you can also run `bash <(curl -sSL https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/SystemTweaks.sh)` to apply some system tweaks to improve your gaming experience.
-3. Start `WDHS.bat` with [Protontricks](https://github.com/Matoking/protontricks) by double clicking it or via Lutris.
+2. Start `WDHS.bat` with [Protontricks](https://github.com/Matoking/protontricks) by double clicking it or via Lutris.
 
 <details>
     <summary>Lutris instructions</summary>
@@ -54,9 +53,16 @@ Make sure to have the following packages installed before proceeding: `7z curl z
 
 ## Additional fixes and improvements
 
-If you're using an integrated GPU, set a fixed amount of memory allocated towards it in your BIOS. And if you have both discreet and integrated GPUs then make sure that your BIOS' preferences are set to prioritize PCI-E GPU over the integrated one.
+You can run the following commands to improve your experience:
 
-To remedy various audio issues make sure that your system is not using PipeWire and WirePlumber, switch to PulseAudio instead as it seems to cause less issues.
+- Fixes 'out of memory' crashes<br>
+`sudo echo 'vm.max_map_count=1048576' >>/etc/sysctl.conf`<br>
+- Fixes audio crackling<br>
+`sudo echo 'PULSE_LATENCY_MSEC=60' >>/etc/profile.d/pulselatency.sh`<br>
+- Fixes game stuttering<br>
+`sudo echo 'RADV_PERFTEST=gpl' >>/etc/profile.d/gpl.sh`<br>
+
+If you're using an integrated GPU, set a fixed amount of memory allocated towards it in your BIOS. And if you have both discreet and integrated GPUs then make sure that your BIOS' preferences are set to prioritize PCI-E GPU over the integrated one.
 
 To remove screen tearing on X11, make sure to follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
 
