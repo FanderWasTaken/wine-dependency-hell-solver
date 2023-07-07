@@ -57,8 +57,6 @@ You can run the following commands to improve your experience, reboot to apply t
 
 - Fixes 'out of memory' crashes<br>
 `sudo echo 'vm.max_map_count=1048576' >>/etc/sysctl.conf`<br>
-- Fixes audio crackling<br>
-`sudo echo 'PULSE_LATENCY_MSEC=60' >>/etc/profile.d/pulselatency.sh`<br>
 - Fixes game stuttering<br>
 `sudo echo 'RADV_PERFTEST=gpl' >>/etc/profile.d/gpl.sh`<br>
 
