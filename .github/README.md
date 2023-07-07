@@ -40,6 +40,7 @@ Here are games that were fixed partially or completely after running this script
 Make sure to have the following packages installed before proceeding: `7z curl zenity`
 
 1. Run `bash <(curl -sSL https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)` in your terminal.
+3. Optionally you can also run `sudo bash <(curl -sSL https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/SystemTweaks.sh)` to apply some system tweaks to improve your gaming experience.
 2. Start `WDHS.bat` with [Protontricks](https://github.com/Matoking/protontricks) by double clicking it or via Lutris.
 
 <details>
@@ -55,13 +56,9 @@ Make sure to have the following packages installed before proceeding: `7z curl z
 
 If you're using an integrated GPU, set a fixed amount of memory allocated towards it in your BIOS. And if you have both discreet and integrated GPUs then make sure that your BIOS' preferences are set to prioritize PCI-E GPU over the integrated one.
 
-The default Linux limit on virtual memory is pretty low. Add the `vm.max_map_count=1048576` to the `/etc/sysctl.conf` to increase that limit.
+To remedy various audio issues make sure that your system is not using PipeWire and WirePlumber, switch to PulseAudio instead as it seems to cause less issues.
 
-To remedy various audio issues, such as crackling, add `PULSE_LATENCY_MSEC=60` to `/etc/profile.d/pulselatency.sh` and make sure that your system is not using PipeWire and WirePlumber, switch to PulseAudio instead as it seems to cause less issues.
-
-To reduce screen tearing on X11, make sure to follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
-
-[DXVK](https://github.com/doitsujin/dxvk) can cause stuttering while playing a game for the first time, which ruins the experience. In order to minimize the amount of stuttering, add `RADV_PERFTEST=gpl` to `/etc/profile.d/gpl.sh` with a text editor, reboot to apply the changes. **Mesa 23.1 and newer has this variable set by default.**
+To remove screen tearing on X11, make sure to follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
 
 For games made with [Unreal Engine](https://www.unrealengine.com/en-US) please follow guides on PCGamingWiki for [UE3](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_4) and [UE4](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_4) to fix the stuttering issue.
 
