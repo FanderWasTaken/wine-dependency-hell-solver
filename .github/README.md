@@ -68,7 +68,9 @@ For games made with [Unreal Engine](https://www.unrealengine.com/en-US) please f
 
 ## Lutris integration into Steam
 
-Make sure to go into settings and disable `DXVK-NVAPI DLSS emulation` for the Wine runner as it can cause games to crash or provide suboptimal results.
+Enable Gamescope and set Output resolution to the one of your display. This will fix issues related to Steam Overlay and Steam Input not working. **You need to have `gamescope` package installed on your system for it to work.**
+
+Make sure to go into settings and disable `DXVK-NVAPI DLSS emulation` for the Wine runner as it can cause games to crash.
 
 You can use [Steam ROM Manager](https://github.com/SteamGridDB/steam-rom-manager) if you wish to import your Lutris games to Steam with the least amount of headaches. Despite its name, SRM can import data from `.desktop` application shortcuts. It also allows you to add custom artwork for games, sourced from [SteamGridDB](https://www.steamgriddb.com/).
 
