@@ -53,24 +53,13 @@ Make sure to have the following packages installed before proceeding: `7z curl z
 
 ## Additional fixes and improvements
 
-You can run the following commands to improve your experience, reboot to apply these changes:
+Be sure to use Wayland over X11 if possible as it helps to alleviate most issues related to screen-tearing, frame pacing and input latency. [GOverlay](https://github.com/benjamimgois/goverlay) can be used to set frame rate limit and vsync globally.
 
-- Fixes 'out of memory' crashes<br>
-`sudo echo 'vm.max_map_count=1048576' >>/etc/sysctl.conf`<br>
-- Fixes game stuttering<br>
-`sudo echo 'RADV_PERFTEST=gpl' >>/etc/profile.d/gpl.sh`<br>
-
-If you're using an integrated GPU, set a fixed amount of memory allocated towards it in your BIOS. And if you have both discreet and integrated GPUs then make sure that your BIOS' preferences are set to prioritize PCI-E GPU over the integrated one.
-
-To remove screen tearing on X11, make sure to follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
-
-For games made with [Unreal Engine](https://www.unrealengine.com/en-US) please follow guides on PCGamingWiki for [UE3](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_4) and [UE4](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_4) to fix the stuttering issue.
+For games made with [Unreal Engine](https://www.unrealengine.com/en-US) please follow guides on PCGamingWiki for [UE3](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_3) and [UE4](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_4) to fix the stuttering issue.
 
 ## Lutris integration into Steam
 
-Enable Gamescope and set Output resolution to the one of your display. This will fix issues related to Steam Overlay and Steam Input not working. **You need to have `gamescope` package installed on your system for it to work.**
-
-Make sure to go into settings and disable `DXVK-NVAPI DLSS emulation` for the Wine runner as it can cause games to crash.
+Make sure to disable `DXVK-NVAPI DLSS` for the Wine runner as it can cause games to crash on AMD GPUs.
 
 You can use [Steam ROM Manager](https://github.com/SteamGridDB/steam-rom-manager) if you wish to import your Lutris games to Steam with the least amount of headaches. Despite its name, SRM can import data from `.desktop` application shortcuts. It also allows you to add custom artwork for games, sourced from [SteamGridDB](https://www.steamgriddb.com/).
 
