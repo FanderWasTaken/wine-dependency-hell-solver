@@ -53,9 +53,9 @@ Make sure to have the following packages installed before proceeding: `7z curl z
 
 ## Additional fixes and improvements
 
-Be sure to use Wayland over X11 if possible as it helps to alleviate most issues related to screen-tearing, frame pacing and input latency. [GOverlay](https://github.com/benjamimgois/goverlay) can be used to set frame rate limit and vsync globally.
+Wayland helps to alleviate most issues related to screen-tearing, frame pacing and input latency. If you're using X11, please follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
 
-For games made with [Unreal Engine](https://www.unrealengine.com/en-US) please follow guides on PCGamingWiki for [UE3](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_3) and [UE4](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_4) to fix the stuttering issue.
+For games made with [Unreal Engine](https://www.unrealengine.com/en-US) please follow guides on PCGamingWiki for [UE3](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_3) and [UE4](https://www.pcgamingwiki.com/wiki/Engine:Unreal_Engine_4) to reduce stuttering.
 
 ## Lutris integration into Steam
 
