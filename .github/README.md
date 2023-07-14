@@ -57,26 +57,13 @@ Wayland helps to alleviate most issues related to screen-tearing, frame pacing a
 
 On Debian and Ubuntu base distros you need to install drivers.
 
-- For AMD use this command: `sudo dpkg --add-architecture i386 && sudo apt update && sudo apt upgrade && sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386`.
+- For AMD use this command: `sudo dpkg --add-architecture i386 && sudo apt update && sudo apt upgrade && sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386`
 
-- For NVIDIA your distro should offer you a way to download a driver upon first boot or have it pre-installed. Run this command to add required packages: `sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y libvulkan1 libvulkan1:i386`.
+- For NVIDIA your distro should offer you a way to download a driver upon first boot or have them pre-installed. Run this command to add packages that may not have been installed automatically: `sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y libvulkan1 libvulkan1:i386`
 
-I highly discourage you from using PPAs for Mesa or NVIDIA Driver as they can potentially brick your system. And if you do update in that way, please use `ppa-purge` in order to remove these packages if any issues do arise.
+**I highly discourage you from using PPAs for Mesa or NVIDIA Drivers** as they can potentially brick your system. And if you do update in that way, please use `ppa-purge` in order to remove these packages if any issues do arise.
 
-In order to minimize stuttering with Bottles or Lutris use [dxvk-gplasync](https://gitlab.com/Ph42oN/dxvk-gplasync). Run the following command to insure it works correctly: `echo 'dxvk.enableAsync=true'>~/.config/dxvk.conf; echo 'dxvk.gplAsyncCache=true'>>~/.config/dxvk.conf`. For Lutris you can install it into `~/.local/share/lutris/runtime/dxvk`.
-
-## Lutris integration into Steam
-
-Make sure to disable `DXVK-NVAPI DLSS` for the Wine runner as it can cause games to crash on AMD GPUs.
-
-You can use [Steam ROM Manager](https://github.com/SteamGridDB/steam-rom-manager) if you wish to import your Lutris games to Steam with the least amount of headaches. Despite its name, SRM can import data from `.desktop` application shortcuts. It also allows you to add custom artwork for games, sourced from [SteamGridDB](https://www.steamgriddb.com/).
-
-<details>
-    <summary>Lutris parser guide</summary>
-      
-Create a new Parser and use `Non Steam Shortcuts` as a template. Add `*/${title}@(.desktop|.DESKTOP)` as `User's glob` parameter and lead `ROMs directory` to the path where you have your games installed. Create a desktop shortcut for your game from Lutris and place `.desktop` shortcut into your game's directory. Save, go to `Preview`, press `Parse` and add your games with desired artwork.
-
-</details>
+In order to minimize stuttering with Bottles or Lutris use [dxvk-gplasync](https://gitlab.com/Ph42oN/dxvk-gplasync). Run the following command to insure it works correctly: `echo 'dxvk.enableAsync=true'>~/.config/dxvk.conf; echo 'dxvk.gplAsyncCache=true'>>~/.config/dxvk.conf`. For Lutris you can install it into `~/.local/share/lutris/runtime/dxvk`. Also make sure to disable `DXVK-NVAPI DLSS` for the Wine runner in Lutris as it can cause games to crash on AMD GPUs.
 
 ## Credits
 
