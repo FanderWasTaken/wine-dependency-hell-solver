@@ -55,6 +55,8 @@ Make sure to have the following packages installed before proceeding: `7z curl`
 
 Wayland helps to alleviate most issues related to screen-tearing, frame pacing and input latency. If you're experiencing screen-tearing on X11, please follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
 
+<details>
+<summary>Debian, Ubuntu and their derivatives</summary>
 On Debian and Ubuntu base distros you need to install drivers.
 
 - For AMD use this command: `sudo dpkg --add-architecture i386 && sudo apt update && sudo apt upgrade && sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386`
@@ -62,8 +64,12 @@ On Debian and Ubuntu base distros you need to install drivers.
 - For NVIDIA your distro should offer you a way to download a driver upon first boot or have them pre-installed. Run this command to add packages that may not have been installed automatically: `sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y libvulkan1 libvulkan1:i386`
 
 **I highly discourage you from using PPAs for Mesa or NVIDIA Drivers** as they can potentially brick your system. And if you do update in that way, please use `ppa-purge` in order to remove these packages if any issues do arise.
+</details>
 
+<details>
+<summary>Shader cache and DXVK related stuuers</summary>
 In order to minimize stuttering with Bottles or Lutris use [dxvk-gplasync](https://gitlab.com/Ph42oN/dxvk-gplasync). Run the following command to insure it works correctly: `echo 'dxvk.enableAsync=true'>~/.config/dxvk.conf; echo 'dxvk.gplAsyncCache=true'>>~/.config/dxvk.conf`. For Lutris you can install it into `~/.local/share/lutris/runtime/dxvk`. Also make sure to disable `DXVK-NVAPI DLSS` for the Wine runner in Lutris as it can cause games to crash on AMD GPUs.
+</details>
 
 ## Credits
 
