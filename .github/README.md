@@ -86,8 +86,6 @@ In order to minimize stuttering with Bottles or Lutris on Mesa under version 23.
 <details><summary> Lutris tips</summary>
 
 Make sure to disable `DXVK-NVAPI DLSS` for the Wine runner in Lutris as it can cause games to crash on AMD GPUs.
-
-If you're running Arch, Fedora or any other distro that's updated frequently, disable Lutris' Runtime in Global Settings as it will cause issues due to being way out of date in comparison to the rest of your system.
 </details>
 
 ## Credits
