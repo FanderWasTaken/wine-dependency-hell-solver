@@ -29,7 +29,7 @@ Here are games that were fixed partially or completely after running this script
 | [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download)                                   | Crashing installers                                      |
 | [Media Foundation](https://github.com/z0z0z/mf-installcab)                                            | Some cases of video playback                             |
 | [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)            | Games crashing when relying heavily on the technology    |
-| [Visual C++ Redistributable packages](https://www.microsoft.com/en-us/download/details.aspx?id=30679) | Various crashes and missing .dll issues                  |
+| [Visual C++ Redistributable packages](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170) | Various crashes and missing .dll issues                  |
 
 **Disclaimer**: Though my script installs Media Foundation you may still exhibit unwanted behavior.
 
