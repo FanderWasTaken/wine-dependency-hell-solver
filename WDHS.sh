@@ -68,7 +68,7 @@ outs=(
 )
 
 for i in "${!urls[@]}"; do
-    curl ${urls[$i]} -o installers/${outs[$i]} --silent &
+    wget -c ${urls[$i]} -O installers/${outs[$i]} --quiet &
 done
 wait
 
