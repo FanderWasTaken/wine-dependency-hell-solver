@@ -4,7 +4,7 @@
 
 ## Introduction
 
-If you ever had issues launching or running Windows games or applications under Wine, then try the script I made, it should solve most issues you may encounter.
+If you ever had issues launching or running Windows games and applications with Wine, then try this script I made, it should solve most issues you may encounter.
 
 ## Description
 
@@ -21,26 +21,28 @@ Here are games that were fixed partially or completely after running this script
 - [The Darkness II](https://github.com/ValveSoftware/Proton/issues/563) - Missing voice over.
 - [Warhammer 40,000: Boltgun](https://github.com/ValveSoftware/Proton/issues/6795) - Broken cut-scenes.
 
+*P.S. Certain game installers no longer fail due to missing .dll files*
+
 ## Packages
 
-| Software                                                                                              | Fixes                                                    |
+| Dependency                                                                                              | What it fixes                                                    |
 | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109)            | Video and audio playback, missing or broken UI and menus |
-| [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download)                                   | Crashing installers                                      |
+| [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download)                                   | Crashing installers and games                                      |
 | [Media Foundation](https://github.com/z0z0z/mf-installcab)                                            | Some cases of video playback                             |
 | [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)            | Games crashing when relying heavily on the technology    |
 | [Visual C++ Redistributable packages](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170) | Various crashes and missing .dll issues                  |
 
-**Disclaimer**: Though my script installs Media Foundation you may still exhibit unwanted behavior.
+**Disclaimer**: Though my script installs Media Foundation you may still exhibit unwanted behavior. Use builds by [Thomas Crider, e.g. GloriousEggroll](https://github.com/GloriousEggroll) in case of any issues.
 
-**All installers are taken directly from official sources.**
+**All installers are taken directly from the official sources.**
 
 ## Instructions
 
 Make sure to have the following packages installed before proceeding: `7z wget`
 
 1. Run `bash <(curl -sSL https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)` in your terminal.
-2. Start `WDHS.bat` with [Protontricks](https://github.com/Matoking/protontricks) by double clicking it or via Lutris.
+2. Start `WDHS.bat` with [Protontricks](https://github.com/Matoking/protontricks) by double clicking it or via Lutris/Bottles.
 
 <details>
     <summary> Lutris instructions</summary>
@@ -55,21 +57,21 @@ Make sure to have the following packages installed before proceeding: `7z wget`
 
 <details><summary> General advice</summary>
 
-Ultimately, through my own experience, I've found that running a semi-rolling release distro would result in best game to work ratio. That means that your system will be stable, in a sense that it won't crash often and behave unpredictably, but also you will rip the benefits of newer Mesa updates and general Linux Kernel performance and stability improvements. So I wouldn't recommend using something like Ubuntu or Debian Stable for general-purpose computing. My recommendations would include: Fedora, Debian Testing, Debian Sid, Arch Linux.
+Ultimately, through my own experience, I've found that running a semi-rolling release distro would result in the best game to work ratio. That means that your system will be stable, in a sense that it won't crash often and won't behave unpredictably, but you will also rip the benefits of newer Mesa updates and general Linux Kernel performance and stability improvements. So I wouldn't recommend using something like Ubuntu or Debian Stable for general-purpose computing. My recommendations are [Debian Sid](https://www.debian.org/) and [Arch Linux](https://archlinux.org/).
 </details>
 
 <details><summary> Display settings</summary>
 
-Wayland helps to alleviate most issues related to screen-tearing, frame pacing and input latency. If you're experiencing screen-tearing or bad frame pacing, e.g. lag, on X11, please follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
+Wayland/Gamescope help to alleviate most issues related to screen-tearing, frame pacing and input latency. If you're experiencing screen-tearing or bad frame pacing, e.g. lag, on X11, please follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
 </details>
 
-<details><summary> Debian, Ubuntu and their derivatives</summary>
+<details><summary> Ubuntu and their derivatives</summary>
 
-On Debian and Ubuntu base distros you need to install drivers.
+On Ubuntu base distros you need to install drivers.
 
 - For AMD use this command: `sudo dpkg --add-architecture i386 && sudo apt update && sudo apt upgrade && sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386`
 
-- For NVIDIA your distro should offer you a way to download a driver upon first boot or have them pre-installed. Run this command to add packages that may not have been installed automatically: `sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y libvulkan1 libvulkan1:i386`
+- For NVIDIA, your distro should offer you a way to download a driver upon first boot or have them pre-installed. Run this command to add packages that may not have been installed automatically: `sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y libvulkan1 libvulkan1:i386`
 
 **I highly discourage you from using PPAs for Mesa or NVIDIA Drivers** as they can potentially brick your system. And if you do update in that way, please use `ppa-purge` in order to remove these packages if any issues do arise.
 
@@ -77,7 +79,9 @@ On Debian and Ubuntu base distros you need to install drivers.
 
 <details><summary> Shader cache and DXVK related stuttering</summary>
 
-In order to minimize stuttering with Bottles or Lutris on Mesa under version 23.1, use [dxvk-async](https://github.com/Sporif/dxvk-async). For Lutris you can install it into `~/.local/share/lutris/runtime/dxvk`. Add `DXVK_ASYNC=1` environment variable to your games to enable asynchronous DXVK shader compilation.
+In order to minimize stuttering with Wine on Mesa below version 23.1, use [dxvk-async](https://github.com/Sporif/dxvk-async).
+
+For Lutris you can install it into `~/.local/share/lutris/runtime/dxvk`. Add `DXVK_ASYNC=1` environment variable to your games to enable asynchronous DXVK shader compilation.
 
 **Mesa 23.1 made GPL the default way of working with shaders. That means that there would be a severe reduction in stutters one could encounter while using DXVK for Windows games. There is no need to use patched DXVK versions if you have newer Mesa.**
 
