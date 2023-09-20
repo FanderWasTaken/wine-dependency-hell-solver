@@ -55,23 +55,12 @@ Make sure to have the following packages installed before proceeding: `7z wget`
 
 ## Additional fixes and improvements
 
-<details><summary> General advice</summary>
-
-Ultimately, through my own experience, I've found that running a semi-rolling release distro would result in the best game to work ratio. That means that your system will be stable, in a sense that it won't crash often and won't behave unpredictably, but you will also rip the benefits of newer Mesa updates and general Linux Kernel performance and stability improvements. So I wouldn't recommend using something like Ubuntu or Debian Stable for general-purpose computing. My recommendations are [Debian Sid](https://www.debian.org/) and [Arch Linux](https://archlinux.org/).
-</details>
-
 <details><summary> Display settings</summary>
 
 Wayland/Gamescope help to alleviate most issues related to screen-tearing, frame pacing and input latency. If you're experiencing screen-tearing or bad frame pacing, e.g. lag, on X11, please follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
 </details>
 
 <details><summary> Ubuntu and their derivatives</summary>
-
-On Ubuntu base distros you need to install drivers.
-
-- For AMD use this command: `sudo dpkg --add-architecture i386 && sudo apt update && sudo apt upgrade && sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386`
-
-- For NVIDIA, your distro should offer you a way to download a driver upon first boot or have them pre-installed. Run this command to add packages that may not have been installed automatically: `sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y libvulkan1 libvulkan1:i386`
 
 **I highly discourage you from using PPAs for Mesa or NVIDIA Drivers** as they can potentially brick your system. And if you do update in that way, please use `ppa-purge` in order to remove these packages if any issues do arise.
 
