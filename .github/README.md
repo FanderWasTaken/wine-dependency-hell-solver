@@ -4,11 +4,11 @@
 
 ## Introduction
 
-If you ever had issues launching or running Windows games and applications with Wine, then try this script I made, it should solve most issues you may encounter.
+If you ever had issues launching or running software with Wine, then try this script I made, it should solve most issues you may encounter.
 
 ## Description
 
-This is a script that functions similarly to how Valve's installscript.vdf does. It installs Windows dependencies for games to work properly. However, not every game comes with all the required dependencies. So I decided to write a universal script to install **every single dependency** any game may require to work.
+This is a script that functions similarly to how Valve's installscript.vdf does. It installs dependencies for games to work properly. However, not every game comes with all the required dependencies. So I decided to write a universal script to install **every single dependency** any game may require to work.
 
 ## Examples
 
@@ -42,43 +42,21 @@ Here are games that were fixed partially or completely after running this script
 Make sure to have the following packages installed before proceeding: `7z wget`
 
 1. Run `bash <(curl -sSL https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)` in your terminal.
-2. Start `WDHS.bat` with [Protontricks](https://github.com/Matoking/protontricks) by double clicking it or via Lutris/Bottles.
+2. Start `WDHS.bat` with [Protontricks](https://github.com/Matoking/protontricks) by double clicking it or via Wine, Heroic, Lutris or Bottles.
 
-<details>
-    <summary> Lutris instructions</summary>
-      
-![lutris step one](lutris_1.png)
-
-![lutris step two](lutris_2.png)
-
-</details>
-
-## Additional fixes and improvements
+## General tips
 
 <details><summary> Display settings</summary>
 
 Wayland/Gamescope help to alleviate most issues related to screen-tearing, frame pacing and input latency. If you're experiencing screen-tearing or bad frame pacing, e.g. lag, on X11, please follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
 </details>
 
-<details><summary> Ubuntu and their derivatives</summary>
-
-**I highly discourage you from using PPAs for Mesa or NVIDIA Drivers** as they can potentially brick your system. And if you do update in that way, please use `ppa-purge` in order to remove these packages if any issues do arise.
-
-</details>
-
 <details><summary> Shader cache and DXVK related stuttering</summary>
 
 In order to minimize stuttering with Wine on Mesa below version 23.1, use [dxvk-async](https://github.com/Sporif/dxvk-async).
 
-For Lutris you can install it into `~/.local/share/lutris/runtime/dxvk`. Add `DXVK_ASYNC=1` environment variable to your games to enable asynchronous DXVK shader compilation.
+**Mesa 23.1 made GPL the default way of working with shaders. That means that there would be a severe reduction in stutters one could encounter while using DXVK for games. There is no need to use patched DXVK versions if you have newer Mesa.**
 
-**Mesa 23.1 made GPL the default way of working with shaders. That means that there would be a severe reduction in stutters one could encounter while using DXVK for Windows games. There is no need to use patched DXVK versions if you have newer Mesa.**
-
-</details>
-
-<details><summary> Lutris tips</summary>
-
-Make sure to disable `DXVK-NVAPI DLSS` for the Wine runner in Lutris as it can cause games to crash on AMD GPUs.
 </details>
 
 ## Credits
