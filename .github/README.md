@@ -31,7 +31,7 @@ Here are games that were fixed partially or completely after running this script
 | [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)                                    | Games crashing when relying heavily on the technology    |
 | [Visual C++ Redistributable packages](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170) | Various crashes and missing .dll issues                  |
 
-**Disclaimer**: Though my script installs Media Foundation you may still exhibit unwanted behavior with Wine. Use builds by [Thomas Crider, e.g. GloriousEggroll](https://github.com/GloriousEggroll) in case of any issues.
+**Linux Disclaimer**: Though my script installs Media Foundation you may still exhibit unwanted behavior with Wine. Use builds by [Thomas Crider, e.g. GloriousEggroll](https://github.com/GloriousEggroll) in case of any issues.
 
 **All installers are taken directly from the official sources.**
 
