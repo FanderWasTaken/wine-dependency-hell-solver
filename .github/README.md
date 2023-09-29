@@ -48,7 +48,7 @@ Make sure to have the following packages installed before proceeding: `7z wget`
 
 1. Run Terminal or PowerShell as Administrator.
 2. Paste this command and hit enter: `irm https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.ps1 | iex`.
-3. Start `WDHS.bat` by double clicking it.
+3. Start `WDHS.bat` as Administrator.
 
 ## General tips
 

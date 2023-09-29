@@ -12,12 +12,7 @@ echo Installing Runtimes (32-bit)...
 start /wait installers/directx/DXSETUP.exe /silent
 start /wait installers/dotnet/aspnetcore-runtime-6.0.16-win-x86/dotnet.exe /q 
 start /wait installers/dotnet/aspnetcore-runtime-7.0.5-win-x86/dotnet.exe /q
-start /wait installers/mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe mediafoundation
-start /wait installers/mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe mf_
-start /wait installers/mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe mfreadwrite
-start /wait installers/mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe wmadmod
-start /wait installers/mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe wmvdecod
-start /wait installers/mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe wmadmod
+start /wait installers/mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe /quiet /norestart
 start /wait installers/physx/PhysX_9.09.0428_SystemSoftware.exe /quiet
 start /wait installers/vcredist/vcredist_x86_2008.exe /qb
 start /wait installers/vcredist/vcredist_x86_2010.exe /passive /norestart
@@ -32,12 +27,7 @@ start /wait installers/dotnet/aspnetcore-runtime-6.0.16-win-x64/dotnet.exe /q
 start /wait installers/dotnet/aspnetcore-runtime-6.0.16-win-x86/dotnet.exe /q
 start /wait installers/dotnet/aspnetcore-runtime-7.0.5-win-x64/dotnet.exe /q
 start /wait installers/dotnet/aspnetcore-runtime-7.0.5-win-x86/dotnet.exe /q
-start /wait installers/mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe mediafoundation
-start /wait installers/mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe mf_
-start /wait installers/mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe mfreadwrite
-start /wait installers/mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe wmadmod
-start /wait installers/mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe wmvdecod
-start /wait installers/mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe wmadmod
+start /wait installers/mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe /quiet /norestart
 start /wait installers/physx/PhysX_9.09.0428_SystemSoftware.exe /quiet
 start /wait installers/vcredist/vcredist_x86_2008.exe /qb
 start /wait installers/vcredist/vcredist_x64_2008.exe /qb
