@@ -44,19 +44,6 @@ Make sure to have the following packages installed before proceeding: `7z wget`
 
 1. Run `bash <(curl -sSL https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)` in your terminal.
 2. Start `WDHS.bat` with [Protontricks](https://github.com/Matoking/protontricks) by double clicking it or via Wine, Heroic, Lutris or Bottles.
-3. Add DLL Overrides:
-
-   <details><summary>Lutris</summary>
-
-   Go to settings for Wine runner and add this command prefix: `env WINEDLLOVERRIDES="devenum=n"`
-
-   </details>
-
-   <details><summary>Steam</summary>
-
-   Add launch option for your game: `env WINEDLLOVERRIDES="devenum=n" %command%`
-
-   </details>
 
 ### Windows 🪟
 
@@ -79,6 +66,12 @@ In case if you experience any issues with performance, be sure to check [this gu
 In order to minimize stuttering with Wine on Mesa below version 23.1, use [dxvk-async](https://github.com/Sporif/dxvk-async).
 
 **Mesa 23.1 made GPL the default way of working with shaders. That means that there would be a severe reduction in stutters one could encounter while using DXVK for games. There is no need to use patched DXVK versions if you have newer Mesa.**
+
+</details>
+
+<details><summary> Fix cutscenes that use WMP</summary>
+
+Please install and configure `gamescope` following [this guide](https://linux-gaming.kwindu.eu/index.php?title=Gamescope). It will allow videos to play without game minimizing (it seems like on Windows these games run WMP in borderless mode above the game's window and play a video that way)
 
 </details>
 
