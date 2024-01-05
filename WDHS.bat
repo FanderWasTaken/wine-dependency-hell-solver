@@ -19,7 +19,7 @@ start /wait installers/vcredist/vcredist_x86_2010.exe /passive /norestart
 start /wait installers/vcredist/vcredist_x86_2012.exe /passive /norestart
 start /wait installers/vcredist/vcredist_x86_2013.exe /passive /norestart
 start /wait installers/vcredist/vcredist_x86_2022.exe /passive /norestart
-start /wait installers/codecs/K-Lite_Codec_Pack_1800_Basic.exe /verysilent
+start /wait installers/codecs/K-Lite_Codec_Pack_1800_Basic.exe /VERYSILENT /NORESTART /SUPPRESSMSGBOXES /LOADINF=klcp.ini
 goto END
 :X64
 echo Installing Runtimes (64-bit)...
@@ -40,10 +40,11 @@ start /wait installers/vcredist/vcredist_x86_2013.exe /passive /norestart
 start /wait installers/vcredist/vcredist_x64_2013.exe /passive /norestart
 start /wait installers/vcredist/vcredist_x86_2022.exe /passive /norestart
 start /wait installers/vcredist/vcredist_x64_2022.exe /passive /norestart
-start /wait installers/codecs/K-Lite_Codec_Pack_1800_Basic.exe /verysilent
+start /wait installers/codecs/K-Lite_Codec_Pack_1800_Basic.exe /VERYSILENT /NORESTART /SUPPRESSMSGBOXES /LOADINF=klcp.ini
 goto END
 :END
 cscript msg.vbs "Installation was completed successfully!"
 :: Cleaning up
 del msg.vbs
+del K-Lite_Codec_Pack_1800_Basic.tmp.dxvk-cache
 exit

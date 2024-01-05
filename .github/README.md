@@ -28,7 +28,7 @@ Here are games that were fixed partially or completely after running this script
 | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109)                                    | Video and audio playback, missing or broken UI and menus |
 | [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download)                                                           | Crashing installers and games                            |
-| [Media Foundation](https://github.com/z0z0z/mf-installcab) & [K-Lite Codec Pack](https://codecguide.com/about_kl.htm)         | Broken video playback                                    |
+| [Media Foundation](https://github.com/z0z0z/mf-installcab) & [K-Lite Codec Pack](https://codecguide.com/about_kl.htm)         | Broken video and audio playback                                    |
 | [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)                                    | Games crashing when relying heavily on the technology    |
 | [Visual C++ Redistributable packages](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170) | Various crashes and missing .dll issues                  |
 
@@ -44,6 +44,19 @@ Make sure to have the following packages installed before proceeding: `7z wget`
 
 1. Run `bash <(curl -sSL https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)` in your terminal.
 2. Start `WDHS.bat` with [Protontricks](https://github.com/Matoking/protontricks) by double clicking it or via Wine, Heroic, Lutris or Bottles.
+3. Add DLL Overrides:
+
+    <details><summary>Lutris</summary>
+    
+    Go to settings for Wine runner and add this command prefix: `env WINEDLLOVERRIDES="quartz,wmp,devenum=n"`
+
+    </details>
+
+    <details><summary>Steam</summary>
+
+    Add launch option for your game: `env WINEDLLOVERRIDES="quartz,wmp,devenum=n" %command%`
+
+    </details>
 
 ### Windows 🪟
 
