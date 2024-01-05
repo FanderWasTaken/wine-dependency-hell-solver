@@ -48,13 +48,13 @@ Make sure to have the following packages installed before proceeding: `7z wget`
 
    <details><summary>Lutris</summary>
 
-   Go to settings for Wine runner and add this command prefix: `env WINEDLLOVERRIDES="quartz,wmp,devenum=n"`
+   Go to settings for Wine runner and add this command prefix: `env WINEDLLOVERRIDES="quartz,wmp,devenum,Unarc,ISDone=n"`
 
    </details>
 
    <details><summary>Steam</summary>
 
-   Add launch option for your game: `env WINEDLLOVERRIDES="quartz,wmp,devenum=n" %command%`
+   Add launch option for your game: `env WINEDLLOVERRIDES="quartz,wmp,devenum,Unarc,ISDone=n" %command%`
 
    </details>
 
