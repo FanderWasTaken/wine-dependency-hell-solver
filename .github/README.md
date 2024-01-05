@@ -14,12 +14,13 @@ This is a script that functions similarly to how Valve's installscript.vdf does.
 
 Here are games that were fixed partially or completely after running this script:
 
-- [Call of Juarez: Bound in Blood](https://github.com/ValveSoftware/Proton/issues/1831) - Issues with sound and video playback.
-- [Darksiders](https://github.com/ValveSoftware/Proton/issues/264) - Missing main menu, in-game UI and cut-scenes.
-- [Mortal Kombat Komplete Edition](https://github.com/ValveSoftware/Proton/issues/1185) - Broken character select screen.
-- [Tell Me Why](https://github.com/ValveSoftware/Proton/issues/6829) - Cut-scenes crashes.
-- [The Darkness II](https://github.com/ValveSoftware/Proton/issues/563) - Missing voice over.
-- [Warhammer 40,000: Boltgun](https://github.com/ValveSoftware/Proton/issues/6795) - Broken cut-scenes.
+- [Call of Juarez: Bound in Blood](https://github.com/ValveSoftware/Proton/issues/1831) - Issues with sound and video playback
+- [Darksiders](https://github.com/ValveSoftware/Proton/issues/264) - Missing main menu, in-game UI and cut-scenes
+- [Mortal Kombat Komplete Edition](https://github.com/ValveSoftware/Proton/issues/1185) - Broken character select screen
+- [Tell Me Why](https://github.com/ValveSoftware/Proton/issues/6829) - Cut-scenes crashes
+- [The Darkness II](https://github.com/ValveSoftware/Proton/issues/563) - Missing voice over
+- [Ultra Street Fighter IV](https://github.com/ValveSoftware/Proton/issues/345) - Missing videos
+- [Warhammer 40,000: Boltgun](https://github.com/ValveSoftware/Proton/issues/6795) - Broken cut-scenes
 
 ## Packages
 
@@ -27,7 +28,7 @@ Here are games that were fixed partially or completely after running this script
 | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109)                                    | Video and audio playback, missing or broken UI and menus |
 | [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download)                                                           | Crashing installers and games                            |
-| [Media Foundation](https://github.com/z0z0z/mf-installcab)                                                                    | Some cases of video playback                             |
+| [Media Foundation](https://github.com/z0z0z/mf-installcab) & [K-Lite Codec Pack](https://codecguide.com/about_kl.htm)         | Broken video playback                                    |
 | [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)                                    | Games crashing when relying heavily on the technology    |
 | [Visual C++ Redistributable packages](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170) | Various crashes and missing .dll issues                  |
 

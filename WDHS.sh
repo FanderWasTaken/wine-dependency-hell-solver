@@ -19,6 +19,7 @@ idirs=(
     'mf'
     'physx'
     'vcredist'
+    'codecs'
 )
 
 for i in "${!idirs[@]}"; do
@@ -45,6 +46,7 @@ urls=(
     'https://aka.ms/highdpimfc2013x64enu'
     'https://aka.ms/vs/17/release/vc_redist.x86.exe'
     'https://aka.ms/vs/17/release/vc_redist.x64.exe'
+    'https://files2.codecguide.com/K-Lite_Codec_Pack_1800_Basic.exe'
 )
 outs=(
     'directx/directx_Jun2010_redist.exe'
@@ -65,6 +67,7 @@ outs=(
     'vcredist/vcredist_x64_2013.exe'
     'vcredist/vcredist_x86_2022.exe'
     'vcredist/vcredist_x64_2022.exe'
+    'codecs/K-Lite_Codec_Pack_1800_Basic.exe'
 )
 
 for i in "${!urls[@]}"; do

@@ -23,6 +23,7 @@ $idirs = (
     'mf',
     'physx',
     'vcredist'
+    'codecs'
 )
 
 foreach ($idir in $idirs) {
@@ -47,6 +48,7 @@ Invoke-WebRequest -Uri 'https://aka.ms/highdpimfc2013x86enu' -OutFile "$instd\in
 Invoke-WebRequest -Uri 'https://aka.ms/highdpimfc2013x64enu' -OutFile "$instd\installers\vcredist\vcredist_x64_2013.exe" | Out-Null
 Invoke-WebRequest -Uri 'https://aka.ms/vs/17/release/vc_redist.x86.exe' -OutFile "$instd\installers\vcredist\vcredist_x86_2022.exe" | Out-Null
 Invoke-WebRequest -Uri 'https://aka.ms/vs/17/release/vc_redist.x64.exe' -OutFile "$instd\installers\vcredist\vcredist_x64_2022.exe" | Out-Null
+Invoke-WebRequest -Uri 'https://files2.codecguide.com/K-Lite_Codec_Pack_1800_Basic.exe' -OutFile "$instd\codecs\K-Lite_Codec_Pack_1800_Basic.exe" | Out-Null
 
 Write-Output " ~ Extracting files..."
 
