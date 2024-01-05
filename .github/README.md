@@ -28,7 +28,7 @@ Here are games that were fixed partially or completely after running this script
 | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109)                                    | Video and audio playback, missing or broken UI and menus |
 | [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download)                                                           | Crashing installers and games                            |
-| [Media Foundation](https://github.com/z0z0z/mf-installcab) & [K-Lite Codec Pack](https://codecguide.com/about_kl.htm)         | Broken video and audio playback                                    |
+| [Media Foundation](https://github.com/z0z0z/mf-installcab) & [K-Lite Codec Pack](https://codecguide.com/about_kl.htm)         | Broken video and audio playback                          |
 | [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)                                    | Games crashing when relying heavily on the technology    |
 | [Visual C++ Redistributable packages](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170) | Various crashes and missing .dll issues                  |
 
@@ -46,17 +46,17 @@ Make sure to have the following packages installed before proceeding: `7z wget`
 2. Start `WDHS.bat` with [Protontricks](https://github.com/Matoking/protontricks) by double clicking it or via Wine, Heroic, Lutris or Bottles.
 3. Add DLL Overrides:
 
-    <details><summary>Lutris</summary>
-    
-    Go to settings for Wine runner and add this command prefix: `env WINEDLLOVERRIDES="quartz,wmp,devenum=n"`
+   <details><summary>Lutris</summary>
 
-    </details>
+   Go to settings for Wine runner and add this command prefix: `env WINEDLLOVERRIDES="quartz,wmp,devenum=n"`
 
-    <details><summary>Steam</summary>
+   </details>
 
-    Add launch option for your game: `env WINEDLLOVERRIDES="quartz,wmp,devenum=n" %command%`
+   <details><summary>Steam</summary>
 
-    </details>
+   Add launch option for your game: `env WINEDLLOVERRIDES="quartz,wmp,devenum=n" %command%`
+
+   </details>
 
 ### Windows 🪟
 
@@ -68,9 +68,9 @@ Make sure to have the following packages installed before proceeding: `7z wget`
 
 ### Linux 🐧
 
-<details><summary> Display settings</summary>
+<details><summary> General improvements</summary>
 
-Wayland/Gamescope help to alleviate most issues related to screen-tearing, frame pacing and input latency. If you're experiencing screen-tearing or bad frame pacing, e.g. lag, on X11, please follow [this guide](https://linuxreviews.org/HOWTO_fix_screen_tearing).
+In case if you experience any issues with performance, be sure to check [this guide](https://linux-gaming.kwindu.eu/index.php?title=Improving_performance) out.
 
 </details>
 
