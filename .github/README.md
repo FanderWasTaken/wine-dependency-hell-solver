@@ -99,6 +99,7 @@ Install latest drivers from [AMD](https://www.amd.com/en/support), [NVIDIA](http
 - [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts)
 - [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide)
 - [PowerShell Documentation | Microsoft](https://learn.microsoft.com/en-us/powershell/?view=powershell-7.3)
+- [Gamescope guide | Linux Gaming Wiki](https://linux-gaming.kwindu.eu/index.php?title=Gamescope)
 - Project was created with the help of [Visual Studio Code](https://code.visualstudio.com/) ❤️
 
 ---
