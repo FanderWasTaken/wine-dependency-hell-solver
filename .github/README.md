@@ -76,7 +76,7 @@ In order to minimize stuttering with Wine on Mesa below version 23.1, use [dxvk-
 
 Install and configure `gamescope` with these arguments `--rt -r <desired_framerate> --immediate-flips` in Lutris. It will allow videos to play without game minimizing (it seems like on Windows these games run WMP in borderless mode above the game's window and play a video that way).
 
-In order to apply this fix to all games run from Steam, start it with this command: `gamescope --rt -r <desired_framerate> --immediate-flips -f -e -h 720 -- steam -bigpicture`.
+In order to apply this fix to all games run from Steam, start it with this command: `gamescope --rt -r <desired_framerate> --immediate-flips -f -e -h <desired_vertical_resolution> -- steam -bigpicture`.
 
 **If you have an external fps limiter (like GOverlay) be sure to remove `-r <desired_framerate>` from the commands above. Lutris games that are imported to Steam still must have `gamescope` configured in Lutris itself, otherwise things will break.**
 
