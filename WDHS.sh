@@ -20,6 +20,7 @@ idirs=(
     'physx'
     'vcredist'
     'codecs'
+    'wmp'
 )
 
 for i in "${!idirs[@]}"; do
@@ -48,6 +49,7 @@ urls=(
     'https://aka.ms/vs/17/release/vc_redist.x64.exe'
     'https://files2.codecguide.com/K-Lite_Codec_Pack_1800_Basic.exe'
     'https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/klcp.ini'
+    'https://ia601700.us.archive.org/21/items/wmp9_20210117/Arabic/mpsetup_0f5e015254c34cfcd35a302e3cca0132a99275dd.exe'
 )
 outs=(
     'directx/directx_Jun2010_redist.exe'
@@ -70,6 +72,7 @@ outs=(
     'vcredist/vcredist_x64_2022.exe'
     'codecs/K-Lite_Codec_Pack_1800_Basic.exe'
     'codecs/klcp.ini'
+    'wmp/mpsetup_0f5e015254c34cfcd35a302e3cca0132a99275dd.exe'
 )
 
 for i in "${!urls[@]}"; do

@@ -8,37 +8,43 @@
 
 ## Introduction
 
-If you ever had issues launching or running software with Wine or on Windows, then try this script I made, it should solve most issues you may encounter.
+If you ever had issues launching or running software with Wine or on Windows, then try this script I made, it should resolve most issues you encountered
 
 ## Description
 
-This is a script that functions similarly to how Valve's installscript.vdf does. It installs dependencies for games to work properly. However, not every game comes with all the required dependencies. So I decided to write a universal script to install **every single dependency** any game may require to work.
+This is a script that functions similarly to how Valve's installscript.vdf does. It installs dependencies for games to work properly. However, not every game comes with all the required dependencies. So I decided to write a universal script to install **every single dependency** any game may require to work
 
 ## Examples
 
-Here are games that were fixed partially or completely after running this script:
+> Here are the games that I was able to fix
+
+### Various issues
 
 - [Call of Juarez: Bound in Blood](https://github.com/ValveSoftware/Proton/issues/1831) - Issues with sound and video playback
 - [Darksiders](https://github.com/ValveSoftware/Proton/issues/264) - Missing main menu, in-game UI and cut-scenes
 - [Mortal Kombat Komplete Edition](https://github.com/ValveSoftware/Proton/issues/1185) - Broken character select screen
-- [Tell Me Why](https://github.com/ValveSoftware/Proton/issues/6829) - Cut-scenes crashes
 - [The Darkness II](https://github.com/ValveSoftware/Proton/issues/563) - Missing voice over
-- [Ultra Street Fighter IV](https://github.com/ValveSoftware/Proton/issues/345) - Missing videos
-- [Warhammer 40,000: Boltgun](https://github.com/ValveSoftware/Proton/issues/6795) - Broken cut-scenes
+
+### Cut-scenes playback
+
+- [Persona 4 Golden](https://github.com/ValveSoftware/Proton/issues/3982)
+- [Tell Me Why](https://github.com/ValveSoftware/Proton/issues/6829)
+- [Ultra Street Fighter IV](https://github.com/ValveSoftware/Proton/issues/345)
+- [Warhammer 40,000: Boltgun](https://github.com/ValveSoftware/Proton/issues/6795)
 
 ## Packages
 
-| Dependency                                                                                                                    | What it fixes                                            |
-| ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109)                                    | Video and audio playback, missing or broken UI and menus |
-| [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download)                                                           | Crashing installers and games                            |
-| [Media Foundation](https://github.com/z0z0z/mf-installcab) & [K-Lite Codec Pack](https://codecguide.com/about_kl.htm)         | Broken video and audio playback                          |
-| [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)                                    | Games crashing when relying heavily on the technology    |
-| [Visual C++ Redistributable packages](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170) | Various crashes and missing .dll issues                  |
+| Dependency                                                                                                                                                              | What it fixes                                            |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109)                                                                              | Video and audio playback, missing or broken UI and menus |
+| [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download)                                                                                                     | Crashing installers and games                            |
+| [Media Foundation](https://github.com/z0z0z/mf-installcab), [K-Lite Codec Pack](https://codecguide.com/about_kl.htm) & [WMP](https://archive.org/details/wmp9_20210117) | Broken video and audio playback                          |
+| [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)                                                                              | Games crashing when relying heavily on the technology    |
+| [Visual C++ Redistributable packages](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170)                                           | Various crashes and missing .dll issues                  |
 
-**Linux Disclaimer**: Though my script installs Media Foundation you may still exhibit unwanted behavior with Wine. Use builds by [Thomas Crider, e.g. GloriousEggroll](https://github.com/GloriousEggroll) in case of any issues.
+> **Linux Disclaimer**: Use builds by [Thomas Crider, e.g. GloriousEggroll](https://github.com/GloriousEggroll) in case of any issues
 
-**All installers are taken directly from the official sources.**
+**Most of the installers are taken directly from the official sources, review install scripts for download links. They're safe as far as I'm aware**
 
 ## Instructions
 

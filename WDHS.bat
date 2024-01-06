@@ -20,6 +20,7 @@ start /wait installers/vcredist/vcredist_x86_2012.exe /passive /norestart
 start /wait installers/vcredist/vcredist_x86_2013.exe /passive /norestart
 start /wait installers/vcredist/vcredist_x86_2022.exe /passive /norestart
 start /wait installers/codecs/K-Lite_Codec_Pack_1800_Basic.exe /VERYSILENT /NORESTART /SUPPRESSMSGBOXES /LOADINF=klcp.ini
+start /wait installers/wmp/mpsetup_0f5e015254c34cfcd35a302e3cca0132a99275dd.exe /Q:A /C /T:C:/windows/system32
 goto END
 :X64
 echo Installing Runtimes (64-bit)...
@@ -28,6 +29,7 @@ start /wait installers/dotnet/aspnetcore-runtime-6.0.16-win-x64/dotnet.exe /q
 start /wait installers/dotnet/aspnetcore-runtime-6.0.16-win-x86/dotnet.exe /q
 start /wait installers/dotnet/aspnetcore-runtime-7.0.5-win-x64/dotnet.exe /q
 start /wait installers/dotnet/aspnetcore-runtime-7.0.5-win-x86/dotnet.exe /q
+start /wait installers/mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe /quiet /norestart
 start /wait installers/mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe /quiet /norestart
 start /wait installers/physx/PhysX_9.09.0428_SystemSoftware.exe /quiet
 start /wait installers/vcredist/vcredist_x86_2008.exe /qb
@@ -41,6 +43,8 @@ start /wait installers/vcredist/vcredist_x64_2013.exe /passive /norestart
 start /wait installers/vcredist/vcredist_x86_2022.exe /passive /norestart
 start /wait installers/vcredist/vcredist_x64_2022.exe /passive /norestart
 start /wait installers/codecs/K-Lite_Codec_Pack_1800_Basic.exe /VERYSILENT /NORESTART /SUPPRESSMSGBOXES /LOADINF=klcp.ini
+start /wait installers/wmp/mpsetup_0f5e015254c34cfcd35a302e3cca0132a99275dd.exe /Q:A /C /T:C:/windows/system32
+start /wait installers/wmp/mpsetup_0f5e015254c34cfcd35a302e3cca0132a99275dd.exe /Q:A /C /T:C:/windows/syswow64
 goto END
 :END
 cscript msg.vbs "Installation was completed successfully!"

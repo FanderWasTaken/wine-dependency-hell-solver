@@ -13,7 +13,7 @@ Write-Output "------------------------------------------------------------------
 $instd = 'C:\WDHS'
 
 Write-Output " ~ The install path is: $instd."
-Write-Output " ~ Downloading Installers... It may take a while."
+Write-Output " ~ Downloading Installers... It may take a while. WMP9 is not downloaded as it's pre-installed on Windows"
 
 mkdir $instd -Force | Out-Null
 
