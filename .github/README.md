@@ -2,6 +2,10 @@
 
 ![logo](WDHS.png)
 
+> ⚠️ **Warning for Linux users** ⚠️
+>
+> These fixes only work on latest [Proton-GE](https://github.com/GloriousEggroll/proton-ge-custom) and [Wine-GE](https://github.com/gloriouseggroll/wine-ge-custom) version 7, version 8 breaks video playback as of January 2024
+
 ## Introduction
 
 If you ever had issues launching or running software with Wine or on Windows, then try this script I made, it should solve most issues you may encounter.
