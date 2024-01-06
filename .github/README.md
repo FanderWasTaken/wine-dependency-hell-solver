@@ -4,7 +4,7 @@
 
 > ⚠️ **Warning for Linux users** ⚠️
 >
-> These fixes only work on latest [Proton-GE](https://github.com/GloriousEggroll/proton-ge-custom) and [Wine-GE](https://github.com/gloriouseggroll/wine-ge-custom) version 7, version 8 breaks video playback as of January 2024
+> These fixes work more often on Version 7 of [Proton-GE](https://github.com/GloriousEggroll/proton-ge-custom) and [Wine-GE](https://github.com/gloriouseggroll/wine-ge-custom), version 8 seems to break video playback in some games
 
 ## Introduction
 
