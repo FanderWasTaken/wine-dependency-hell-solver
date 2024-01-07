@@ -53,8 +53,6 @@ outs=(
     'dotnet/aspnetcore-runtime-6.0.16-win-x64.zip'
     'dotnet/aspnetcore-runtime-7.0.5-win-x86.zip'
     'dotnet/aspnetcore-runtime-7.0.5-win-x64.zip'
-    'mf/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe'
-    'mf/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe'
     'physx/PhysX_9.09.0428_SystemSoftware.exe'
     'vcredist/vcredist_x86_2008.exe'
     'vcredist/vcredist_x64_2008.exe'
