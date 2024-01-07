@@ -38,13 +38,13 @@ This is a script that functions similarly to how Valve's installscript.vdf does.
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109)                                                                              | Video and audio playback, missing or broken UI and menus |
 | [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download)                                                                                                     | Crashing installers and games                            |
-| [Media Foundation](https://github.com/z0z0z/mf-installcab), [K-Lite Codec Pack](https://codecguide.com/about_kl.htm) & [WMP](https://archive.org/details/wmp9_20210117) | Broken video and audio playback                          |
+|  [K-Lite Codec Pack](https://codecguide.com/about_kl.htm) & [WMP x64](https://archive.org/details/wmp9_20210117) | Broken video and audio playback                          |
 | [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)                                                                              | Games crashing when relying heavily on the technology    |
 | [Visual C++ Redistributable packages](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170)                                           | Various crashes and missing .dll issues                  |
 
 > **Linux Disclaimer**: Use builds by [Thomas Crider, e.g. GloriousEggroll](https://github.com/GloriousEggroll) in case of any issues
 
-**Most of the installers are taken directly from the official sources, review install scripts for download links. They're safe as far as I'm aware**
+**All installers are taken directly from the official sources**
 
 ## Instructions
 
@@ -78,14 +78,6 @@ In order to minimize stuttering with Wine on Mesa below version 23.1, use [dxvk-
 
 </details>
 
-<details><summary> Fix cutscenes that use WMP</summary>
-
-Install and configure `gamescope` with these arguments `--rt --immediate-flips` in Lutris. It will allow videos to play without game minimizing (it seems like on Windows these games run WMP in borderless mode above the game's window and play a video that way).
-
-For Steam games add this line as launch options: `gamescope -f -h <desired_resolution_e.g._1080> --rt --immediate-flips %command%`.
-
-</details>
-
 ### Windows 🪟
 
 <details><summary>System setup, updates and drivers</summary>
@@ -103,7 +95,6 @@ Install latest drivers from [AMD](https://www.amd.com/en/support), [NVIDIA](http
 - [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts)
 - [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide)
 - [PowerShell Documentation | Microsoft](https://learn.microsoft.com/en-us/powershell/?view=powershell-7.3)
-- [Gamescope guide | Linux Gaming Wiki](https://linux-gaming.kwindu.eu/index.php?title=Gamescope)
 - Project was created with the help of [Visual Studio Code](https://code.visualstudio.com/) ❤️
 
 ---

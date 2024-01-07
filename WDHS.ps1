@@ -13,14 +13,13 @@ Write-Output "------------------------------------------------------------------
 $instd = 'C:\WDHS'
 
 Write-Output " ~ The install path is: $instd."
-Write-Output " ~ Downloading Installers... It may take a while. WMP9 is not downloaded as it's pre-installed on Windows"
+Write-Output " ~ Downloading Installers... It may take a while."
 
 mkdir $instd -Force | Out-Null
 
 $idirs = (
     'directx',
     'dotnet',
-    'mf',
     'physx',
     'vcredist'
     'codecs'
@@ -35,8 +34,6 @@ Invoke-WebRequest -Uri 'https://download.visualstudio.microsoft.com/download/pr/
 Invoke-WebRequest -Uri 'https://download.visualstudio.microsoft.com/download/pr/579135b3-8d18-4267-9f05-819f31931eb8/a03bcc68c2247d44649cfdde685694b7/aspnetcore-runtime-6.0.16-win-x64.zip' -OutFile "$instd\installers\dotnet\aspnetcore-runtime-6.0.16-win-x64.zip" | Out-Null
 Invoke-WebRequest -Uri 'https://download.visualstudio.microsoft.com/download/pr/e5cb9bbc-6c3d-4ca2-b57e-47de252e7861/209669f62b361008007f66fffa6af38e/aspnetcore-runtime-7.0.5-win-x86.zip' -OutFile "$instd\installers\dotnet\aspnetcore-runtime-7.0.5-win-x86.zip" | Out-Null
 Invoke-WebRequest -Uri 'https://download.visualstudio.microsoft.com/download/pr/82e7d963-e5b6-41fe-84d1-a8c3f1a75bd7/fe22d4a60c66449d3e97a246fc41d10b/aspnetcore-runtime-7.0.5-win-x64.zip' -OutFile "$instd\installers\dotnet\aspnetcore-runtime-7.0.5-win-x64.zip" | Out-Null
-Invoke-WebRequest -Uri 'http://download.windowsupdate.com/msdownload/update/software/svpk/2011/02/windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe' -OutFile "$instd\installers\mf\windows6.1-kb976932-x86_c3516bc5c9e69fee6d9ac4f981f5b95977a8a2fa.exe" | Out-Null
-Invoke-WebRequest -Uri 'http://download.windowsupdate.com/msdownload/update/software/svpk/2011/02/windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe' -OutFile "$instd\installers\mf\windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe" | Out-Null
 Invoke-WebRequest -Uri 'https://us.download.nvidia.com/Windows/9.09.0428/PhysX_9.09.0428_SystemSoftware.exe' -OutFile "$instd\installers\physx\PhysX_9.09.0428_SystemSoftware.exe" | Out-Null
 Invoke-WebRequest -Uri 'https://download.microsoft.com/download/5/D/8/5D8C65CB-C849-4025-8E95-C3966CAFD8AE/vcredist_x86.exe' -OutFile "$instd\installers\vcredist\vcredist_x86_2008.exe" | Out-Null
 Invoke-WebRequest -Uri 'https://download.microsoft.com/download/5/D/8/5D8C65CB-C849-4025-8E95-C3966CAFD8AE/vcredist_x64.exe' -OutFile "$instd\installers\vcredist\vcredist_x64_2008.exe" | Out-Null
@@ -49,7 +46,8 @@ Invoke-WebRequest -Uri 'https://aka.ms/highdpimfc2013x64enu' -OutFile "$instd\in
 Invoke-WebRequest -Uri 'https://aka.ms/vs/17/release/vc_redist.x86.exe' -OutFile "$instd\installers\vcredist\vcredist_x86_2022.exe" | Out-Null
 Invoke-WebRequest -Uri 'https://aka.ms/vs/17/release/vc_redist.x64.exe' -OutFile "$instd\installers\vcredist\vcredist_x64_2022.exe" | Out-Null
 Invoke-WebRequest -Uri 'https://files2.codecguide.com/K-Lite_Codec_Pack_1800_Basic.exe' -OutFile "$instd\codecs\K-Lite_Codec_Pack_1800_Basic.exe" | Out-Null
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/klcp.ini' -OutFile "$instd\codecs\klcp.ini" | Out-Null
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/extras/klcp.ini' -OutFile "$instd\codecs\klcp.ini" | Out-Null
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/extras/klcp.bat' -OutFile "$instd\codecs\klcp.bat" | Out-Null
 
 Write-Output " ~ Extracting files..."
 
