@@ -2,10 +2,6 @@
 
 ![logo](WDHS.png)
 
-> ⚠️ **Warning for Linux users** ⚠️
->
-> These fixes work more often on Version 7 of [Proton-GE](https://github.com/GloriousEggroll/proton-ge-custom) and [Wine-GE](https://github.com/gloriouseggroll/wine-ge-custom), version 8 seems to break video playback in some games
-
 ## Introduction
 
 If you ever had issues launching or running software with Wine or on Windows, then try this script I made, it should resolve most issues you encountered
@@ -41,8 +37,6 @@ This is a script that functions similarly to how Valve's installscript.vdf does.
 |  [K-Lite Codec Pack](https://codecguide.com/about_kl.htm) & [WMP x64](https://archive.org/details/wmp9_20210117) | Broken video and audio playback                          |
 | [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)                                                                              | Games crashing when relying heavily on the technology    |
 | [Visual C++ Redistributable packages](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170)                                           | Various crashes and missing .dll issues                  |
-
-> **Linux Disclaimer**: Use builds by [Thomas Crider, e.g. GloriousEggroll](https://github.com/GloriousEggroll) in case of any issues
 
 **All installers are taken directly from the official sources**
 
