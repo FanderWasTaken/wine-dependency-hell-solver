@@ -4,9 +4,7 @@
 
 ## Description
 
-If you ever had issues launching or running software with Wine, then try this script. I made it as a replacement for Winetricks and Protontricks, this way you can install all of the generic dependencies without needing to try different tricks to fix issues.
-
-This is script functions similarly to Valve's installscript.vdf. Because not every piece of software comes with all the required dependencies, this script installs **every single dependency**.
+If you ever had issues launching or running software with Wine, then try this script. I made it as a replacement for Winetricks and Protontricks, it functions similarly to Valve's installscript.vdf. Because not every piece of software comes with all the required dependencies, this script installs **every single required dependency**. So you can spend more time on using the software you want and less time on tinkering.
 
 ## Packages
 
@@ -16,7 +14,7 @@ This is script functions similarly to Valve's installscript.vdf. Because not eve
 | [K-Lite Codec Pack](https://codecguide.com/about_kl.htm)                                   | Broken video and audio playback in games                     |
 | [Mono](https://wiki.winehq.org/Mono)                                                       | Crashing programs, installers and games                      |
 | [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/) | Crashes when relying heavily on the technology               |
-| [Visual C++ Redistributable packages](https://github.com/abbodi1406/vcredist)              | Various crashes and missing .dll issues                      |
+| [Visual C++ Redistributable Packages](https://github.com/abbodi1406/vcredist)              | Various crashes and missing .dll issues                      |
 
 **All installers are taken directly from the official sources**
 
@@ -53,7 +51,6 @@ Be sure to follow guides on installing latest [GStreamer](https://gstreamer.free
 
 - [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts)
 - [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide)
-- [PowerShell Documentation | Microsoft](https://learn.microsoft.com/en-us/powershell/?view=powershell-7.3)
 - Project was created with the help of [Visual Studio Code](https://code.visualstudio.com/) ❤️
 
 ---

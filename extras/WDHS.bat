@@ -19,6 +19,6 @@ start /wait installers/vcredist/VisualCppRedist_AIO.exe /aiB
 start /wait installers/vcredist/VisualCppRedist_AIO.exe /aiC
 start /wait installers/vcredist/VisualCppRedist_AIO.exe /aiV
 start /wait installers/mono/wine-mono.msi
-start /wait installers/codecs/K-Lite_Codec_Pack.exe
+start /wait installers/codecs/klcp.bat
 cscript msg.vbs "Installation was completed successfully!"
 exit
