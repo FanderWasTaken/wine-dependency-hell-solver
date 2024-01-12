@@ -2,61 +2,32 @@
 
 ![logo](WDHS.png)
 
-## Introduction
-
-If you ever had issues launching or running software with Wine or on Windows, then try this script I made, it should resolve most issues you encountered
-
 ## Description
 
-This is a script that functions similarly to how Valve's installscript.vdf does. It installs dependencies for games to work properly. However, not every game comes with all the required dependencies. So I decided to write a universal script to install **every single dependency** any game may require to work
+If you ever had issues launching or running software with Wine, then try this script. I made it as a replacement for Winetricks and Protontricks, this way you can install all of the generic dependencies without needing to try different tricks to fix issues.
 
-## Examples
-
-> Here are the games that I was able to fix
-
-### Various issues
-
-- [Call of Juarez: Bound in Blood](https://github.com/ValveSoftware/Proton/issues/1831) - Issues with sound and video playback
-- [Darksiders](https://github.com/ValveSoftware/Proton/issues/264) - Missing main menu, in-game UI and cut-scenes
-- [Mortal Kombat Komplete Edition](https://github.com/ValveSoftware/Proton/issues/1185) - Broken character select screen
-- [The Darkness II](https://github.com/ValveSoftware/Proton/issues/563) - Missing voice over
-
-### Cut-scenes playback
-
-- [Persona 4 Golden](https://github.com/ValveSoftware/Proton/issues/3982)
-- [Tell Me Why](https://github.com/ValveSoftware/Proton/issues/6829)
-- [Ultra Street Fighter IV](https://github.com/ValveSoftware/Proton/issues/345)
-- [Warhammer 40,000: Boltgun](https://github.com/ValveSoftware/Proton/issues/6795)
+This is script functions similarly to Valve's installscript.vdf. Because not every piece of software comes with all the required dependencies, this script installs **every single dependency**.
 
 ## Packages
 
-| Dependency                                                                                                                                                              | What it fixes                                            |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109)                                                                              | Video and audio playback, missing or broken UI and menus |
-| [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download)                                                                                                     | Crashing installers and games                            |
-|  [K-Lite Codec Pack](https://codecguide.com/about_kl.htm) & [WMP x64](https://archive.org/details/wmp9_20210117) | Broken video and audio playback                          |
-| [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)                                                                              | Games crashing when relying heavily on the technology    |
-| [Visual C++ Redistributable packages](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170)                                           | Various crashes and missing .dll issues                  |
+| Dependency                                                                                 | What it fixes                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
+| [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109) | Video and audio playback, missing or broken in-game elements |
+| [K-Lite Codec Pack](https://codecguide.com/about_kl.htm)                                   | Broken video and audio playback in games                     |
+| [Mono](https://wiki.winehq.org/Mono)                                                       | Crashing programs, installers and games                      |
+| [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/) | Crashes when relying heavily on the technology               |
+| [Visual C++ Redistributable packages](https://github.com/abbodi1406/vcredist)              | Various crashes and missing .dll issues                      |
 
 **All installers are taken directly from the official sources**
 
 ## Instructions
-
-### Linux 🐧
 
 Make sure to have the following packages installed before proceeding: `7z wget`
 
 1. Run `bash <(curl -sSL https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)` in your terminal.
 2. Start `WDHS.bat` with [Protontricks](https://github.com/Matoking/protontricks) by double clicking it or via Wine, Heroic, Lutris or Bottles.
 
-### Windows 🪟
-
-1. Run `irm https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.ps1 | iex` in your terminal.
-2. Start `WDHS.bat` as Administrator.
-
-## General tips
-
-### Linux 🐧
+## Tips
 
 <details><summary> General improvements</summary>
 
@@ -72,15 +43,9 @@ In order to minimize stuttering with Wine on Mesa below version 23.1, use [dxvk-
 
 </details>
 
-### Windows 🪟
+<details><summary> GStreamer and Wine</summary>
 
-<details><summary>System setup, updates and drivers</summary>
-
-Make sure to run `dism /online /cleanup-image /checkhealth` in a Terminal or PowerShell as Administrator. This will fix any issues you have with your Windows install.
-
-Don't change things that you don't fully understand the use of or don't know how to recover from these changes.
-
-Install latest drivers from [AMD](https://www.amd.com/en/support), [NVIDIA](https://www.nvidia.com/download/index.aspx) or [Intel](https://www.intel.com/content/www/us/en/search.html#sort=relevancy&f:@tabfilter=[Downloads]&f:@stm_10385_en=[Graphics]) for your hardware, non-beta releases are recommended.
+Be sure to follow guides on installing latest [GStreamer](https://gstreamer.freedesktop.org/documentation/installing/on-linux.html?gi-language=c) and [Wine](https://wiki.winehq.org/Download) for your distribution.
 
 </details>
 
