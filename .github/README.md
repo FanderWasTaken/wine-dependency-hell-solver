@@ -4,14 +4,25 @@
 
 ## Description
 
-If you ever had issues launching or running software with Wine, then try this script. I made it as a replacement for Winetricks and Protontricks, it functions similarly to Valve's installscript.vdf. Because not every piece of software comes with all the required dependencies, this script installs **every single required dependency**. So you can spend more time on using the software you want and less time on tinkering.
+> Always make sure to use the absolute latest build of Wine available as that will fix most of your issues by default.
+
+If you ever had issues launching or running software with Wine, then try this script. I made it as a replacement for Wine/Proton-tricks, it functions similarly to Valve's installscript.vdf. Because not every piece of software comes with all the required dependencies, this script installs **every single required dependency**. So you can spend more time on using the software you want and less time on tinkering.
+
+The main goal of this project is to provide users with dependencies that Wine can't ship. For that reason WMP and Windows System Files aren't included here. If something still doesn't work after using this script and no Wine version fixes your issues, there's a good chance that you're trying to run a half-baked piece of software.
+
+---
+
+Why not use Wine/Proton-tricks?
+
+Patching prefixes for each program can get really annoying if you have multiple things you need to configure and become a giant time-waster if some patch doesn't work well with a different one.
+
+---
 
 ## Contents
 
 | Dependency                                                                                 | What it fixes                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
 | [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109) | Video and audio playback, missing or broken in-game elements |
-| [K-Lite Codec Pack](https://codecguide.com/about_kl.htm)                                   | Broken video and audio playback in games                     |
 | [Mono](https://wiki.winehq.org/Mono)                                                       | Crashing programs, installers and games                      |
 | [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/) | Crashes when relying heavily on the technology               |
 | [Visual C++ Redistributable Packages](https://github.com/abbodi1406/vcredist)              | Various crashes and missing .dll issues                      |

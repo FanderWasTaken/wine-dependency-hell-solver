@@ -32,8 +32,6 @@ urls=(
     'https://github.com/abbodi1406/vcredist/releases/download/v0.77.0/VisualCppRedist_AIO_x86_x64.exe'
     'https://dl.winehq.org/wine/wine-mono/8.1.0/wine-mono-8.1.0-x86.msi'
     'https://files2.codecguide.com/K-Lite_Codec_Pack_1800_Mega.exe'
-    'https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/extras/klcp.bat'
-    'https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/extras/klcp.ini'
 )
 outs=(
     'directx/directx.exe'
@@ -41,8 +39,6 @@ outs=(
     'vcredist/VisualCppRedist_AIO.exe'
     'mono/wine-mono.msi'
     'codecs/K-Lite_Codec_Pack.exe'
-    'codecs/klcp.bat'
-    'codecs/klcp.ini'
 )
 
 for i in "${!urls[@]}"; do
