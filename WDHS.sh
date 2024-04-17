@@ -64,7 +64,7 @@ wait
 
 echo " ~ Getting the WDHS.bat..."
 
-wget -c https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/extras/WDHS.bat -O $instd/WDHS.bat --quiet
+wget -c https://github.com/FanderWasTaken/wine-dependency-hell-solver/raw/main/extras/WDHS.bat -O $instd/WDHS.bat --quiet
 wait
 
 echo "-------------------------------------------------------------------"
