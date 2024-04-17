@@ -31,7 +31,7 @@ Patching prefixes for each program can get really annoying if you have multiple 
 
 Make sure to have the following packages installed before proceeding: `7z wget`
 
-1. Run `bash <(curl -sSL https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)` in your terminal.
+1. Run `bash <(wget -qO- https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)` in your terminal.
 2. Start `WDHS.bat` with Wine.
 
 ## Credits
