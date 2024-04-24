@@ -49,7 +49,7 @@ wait
 echo " ~ Extracting files..."
 
 7z x -oinstallers/directx/ installers/directx/directx.exe -y >installers/directx/null
-7z x -oinstallers/vcredist/ vcredist/Visual-C-Runtimes-All-in-One-Feb-2024.zip -y >installers/vcredist/null
+7z x -oinstallers/vcredist/ vcredist/Visual-C-Runtimes-All-in-One-Feb-2024.zip >installers/vcredist/null
 
 echo " ~ Cleaning up..."
 
