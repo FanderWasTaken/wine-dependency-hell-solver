@@ -57,7 +57,7 @@ torm=(
     'directx/directx.exe'
     'directx/null'
     'vcredist/Visual-C-Runtimes-All-in-One-Feb-2024.zip'
-    'installers/vcredist/null'
+    'vcredist/null'
 )
 
 for i in "${!torm[@]}"; do
