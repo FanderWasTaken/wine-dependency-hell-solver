@@ -25,7 +25,7 @@ Patching prefixes for each program can get really annoying if you have multiple 
 | [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109) | Video and audio playback, missing or broken in-game elements |
 | [Mono](https://wiki.winehq.org/Mono)                                                       | Crashing programs, installers and games                      |
 | [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/) | Crashes when relying heavily on the technology               |
-| [Visual C++ Redistributable Packages](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/)              | Various crashes and missing .dll issues                      |
+| [Visual C++ Redistributable Packages](https://gist.github.com/ChuckMichael/7366c38f27e524add3c54f710678c98b)              | Various crashes and missing .dll issues                      |
 
 ## Instructions
 

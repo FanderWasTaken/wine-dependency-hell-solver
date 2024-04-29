@@ -8,18 +8,18 @@ cscript msg.vbs "Packages are going to be installed now. Caution: there will be 
 echo Installing dependencies. Please wait, there will be a pop-up window when everything is installed...
 start /wait installers/directx/DXSETUP.exe /silent
 start /wait installers/physx/PhysX.exe /quiet
-start /wait installers/vcredist/vcredist2005_x86.exe /q
-start /wait installers/vcredist/vcredist2005_x64.exe /q
-start /wait installers/vcredist/vcredist2008_x86.exe /qb
-start /wait installers/vcredist/vcredist2008_x64.exe /qb
-start /wait installers/vcredist/vcredist2010_x86.exe /passive /norestart
-start /wait installers/vcredist/vcredist2010_x64.exe /passive /norestart
-start /wait installers/vcredist/vcredist2012_x86.exe /passive /norestart
-start /wait installers/vcredist/vcredist2012_x64.exe /passive /norestart
-start /wait installers/vcredist/vcredist2013_x86.exe /passive /norestart
-start /wait installers/vcredist/vcredist2013_x64.exe /passive /norestart
-start /wait installers/vcredist/vcredist2015_2017_2019_2022_x86.exe /passive /norestart
-start /wait installers/vcredist/vcredist2015_2017_2019_2022_x64.exe /passive /norestart
+start /wait installers/vcredist/vcp2005x64.exe /q
+start /wait installers/vcredist/vcp2005x86.exe /q
+start /wait installers/vcredist/vcp2008x64.exe /qb
+start /wait installers/vcredist/vcp2008x86.exe /qb
+start /wait installers/vcredist/vcp2010x64.exe /passive /norestart
+start /wait installers/vcredist/vcp2010x86.exe /passive /norestart
+start /wait installers/vcredist/vcp2012x64.exe /passive /norestart
+start /wait installers/vcredist/vcp2012x86.exe /passive /norestart
+start /wait installers/vcredist/vcp2013x64.exe /passive /norestart
+start /wait installers/vcredist/vcp2013x86.exe /passive /norestart
+start /wait installers/vcredist/vcp2015+x64.exe /passive /norestart
+start /wait installers/vcredist/vcp2015+x86.exe /passive /norestart
 start /wait installers/mono/wine-mono.msi
 start /wait installers/codecs/klcp.bat
 cscript msg.vbs "Installation was completed successfully!"
