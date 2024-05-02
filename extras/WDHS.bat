@@ -21,6 +21,7 @@ start /wait installers/vcredist/vcp2013x86.exe /passive /norestart
 start /wait installers/vcredist/vcp2015+x64.exe /passive /norestart
 start /wait installers/vcredist/vcp2015+x86.exe /passive /norestart
 start /wait installers/mono/wine-mono.msi
-start /wait installers/codecs/klcp.bat
+start /wait installers/net/net86.exe /q
+start /wait installers/net/net64.exe /q
 cscript msg.vbs "Installation was completed successfully!"
 exit
