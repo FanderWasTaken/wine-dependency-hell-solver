@@ -23,6 +23,7 @@ Patching prefixes for each program can get really annoying if you have multiple 
 | [Wine Mono](https://wiki.winehq.org/Mono) & [Microsoft .NET Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Crashing programs, installers and games                      |
 | [NVIDIA PhysX](https://www.nvidia.com/en-us/drivers/physx/9_09_0428/physx_9-09-0428_whql/)                                           | Crashes when relying heavily on the technology               |
 | [Microsoft Visual C++ Redistributable Packages](https://gist.github.com/ChuckMichael/7366c38f27e524add3c54f710678c98b)               | Various crashes and missing .dll issues                      |
+| [Xvid MPEG-4 Video Codec](https://www.xvid.com/)                                                                                     | Video playback issues                                        |
 
 ## Instructions
 
