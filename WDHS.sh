@@ -43,7 +43,7 @@ urls=(
     'https://aka.ms/vs/17/release/VC_redist.x64.exe'
     'https://aka.ms/vs/17/release/VC_redist.x86.exe'
     'https://download.microsoft.com/download/vc60pro/Update/2/W9XNT4/EN-US/VC6RedistSetup_deu.exe'
-    'https://www.ddsystem.com.br/update/setup/vb6+sp6/VS6SP6.EXE'
+    'https://web.archive.org/web/20160222035203/http://download.microsoft.com/download/1/9/f/19fe4660-5792-4683-99e0-8d48c22eed74/Vs6sp6.exe'
     'https://dl.winehq.org/wine/wine-mono/9.1.0/wine-mono-9.1.0-x86.msi'
     'https://download.visualstudio.microsoft.com/download/pr/1fbf5c5f-9770-402d-8971-83da662d8cf9/4e37b3c24bcb6004875b9f8b08024303/windowsdesktop-runtime-8.0.4-win-x86.exe'
     'https://download.visualstudio.microsoft.com/download/pr/c1d08a81-6e65-4065-b606-ed1127a954d3/14fe55b8a73ebba2b05432b162ab3aa8/windowsdesktop-runtime-8.0.4-win-x64.exe'
