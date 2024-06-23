@@ -9,7 +9,7 @@ If you ever had issues launching or running software with Wine, then try this sc
 The main goal of this project is to provide users with dependencies that Wine can't ship. For that reason WMP and Windows System Files aren't included here. If something still doesn't work after using this script and no Wine version fixes your issues, there's a good chance that you're trying to run a half-baked piece of software.
 
 > [!TIP]
-> If you're having issues with your game or program of any kind try different Wine/Proton versions
+> If you're having issues with your game or program of any kind try different Wine/Proton versions.
 
 ## Why not use Wine/Proton-tricks?
 
@@ -27,55 +27,58 @@ Patching prefixes for each program can get really annoying if you have multiple 
 
 ## Instructions
 
-Make sure to have the following packages installed before proceeding: `7z wget`
+Make sure to have the following packages installed before proceeding: `7z wget`.
 
-1. Run `bash <(wget -qO- https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)` in your terminal.
-2. Start `WDHS.bat` with Wine.
+1.  Run `this command` in your terminal.
+
+        bash <(wget -qO- https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)
+
+2.  Start `WDHS.bat` with Wine.
 
 ## Additional configuration
 
 Even after installing all of these dependencies I still ran into some issues:
 
-- Missing dlls (`unarc.dll` and `ISDone.dll`)
-- Crashing games and installers
+- Missing dlls (`unarc.dll` and `ISDone.dll`).
+- Crashing games and installers.
 
 Here are the solutions I've found:
 
 <details>
-<summary>Increase swap-file size to 2x the size of your RAM</summary>
+<summary>Increase swap-file size to 2x the size of your RAM.</summary>
     
-1. Disable the swap file with `swapoff`
+1. Disable the swap file with `swapoff`.
 
         sudo swapoff /swapfile
 
-2.  Resize the file using `fallocate`, in this instance to a `4GB` swap file
+2.  Resize the file using `fallocate`, in this instance to a `4GB` swap file.
 
         sudo fallocate -l 4G /swapfile
 
-3.  Mark the file as a _swapfile_ using `mkswap`
+3.  Mark the file as a _swapfile_ using `mkswap`.
 
         sudo mkswap /swapfile
 
-4.  Enable the swap file with `swapon`
+4.  Enable the swap file with `swapon`.
 
         sudo swapon /swapfile
 
-5.  Verify changes with `swapon`
+5.  Verify changes with `swapon`.
 
         swapon --show
 
     </details>
 
 <details>
-<summary>Increase the value of <code>vm.max_map_count</code></summary>
+<summary>Increase the value of <code>vm.max_map_count</code>.</summary>
 
-1.  Open `/etc/sysctl.conf` with `nano`
+1.  Open `/etc/sysctl.conf` with `nano`.
 
         sudo nano /etc/sysctl.conf
 
-2.  Add `vm.max_map_count=1048576` to the end of the file and save using `CTRL+X`
+2.  Add `vm.max_map_count=1048576` to the end of the file and save using `CTRL+X`.
 
-3.  Verify changes with `sysctl`, the result should be `1048576`
+3.  Verify changes with `sysctl`, the result should be `1048576`.
 
         sysctl vm.max_map_count
 
