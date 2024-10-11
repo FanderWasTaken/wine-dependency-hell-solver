@@ -42,55 +42,16 @@ Even after installing all of these dependencies I still ran into some issues:
 - Missing dlls (`unarc.dll` and `ISDone.dll`).
 - Crashing games and installers.
 
-Here are the solutions I've found:
+Here are the solutions I've found, that may or may not work:
 
-<details>
-<summary>Increase swap-file size to 2x the size of your RAM.</summary>
-    
-1. Disable the swap file with `swapoff`.
-
-        sudo swapoff /swapfile
-
-2.  Resize the file using `fallocate`, in this instance to a `4GB` swap file.
-
-        sudo fallocate -l 4G /swapfile
-
-3.  Mark the file as a _swapfile_ using `mkswap`.
-
-        sudo mkswap /swapfile
-
-4.  Enable the swap file with `swapon`.
-
-        sudo swapon /swapfile
-
-5.  Verify changes with `swapon`.
-
-        swapon --show
-
-    </details>
-
-<details>
-<summary>Increase the value of <code>vm.max_map_count</code>.</summary>
-
-1.  Open `/etc/sysctl.conf` with `nano`.
-
-        sudo nano /etc/sysctl.conf
-
-2.  Add `vm.max_map_count=1048576` to the end of the file and save using `CTRL+X`.
-
-3.  Verify changes with `sysctl`, the result should be `1048576`.
-
-        sysctl vm.max_map_count
-
-</details>
+- Increase <code>swap</code> size.
+- Increase the value of <code>vm.max_map_count</code>.
 
 ## Credits
 
 - [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts)
 - [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide)
-- [Reddit comment | acejavelin69](https://www.reddit.com/r/linuxmint/comments/uhjyir/comment/i76gsi9/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
-- [Virtual memory | Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)
-- Project was created with the help of [Visual Studio Code](https://code.visualstudio.com/) ❤️
+- Project was created with the help of [VSCodium](https://vscodium.com/) ❤️
 
 ---
 
