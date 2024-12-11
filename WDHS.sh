@@ -47,7 +47,7 @@ urls=(
     'https://dl.winehq.org/wine/wine-mono/9.1.0/wine-mono-9.1.0-x86.msi'
     'https://download.visualstudio.microsoft.com/download/pr/1fbf5c5f-9770-402d-8971-83da662d8cf9/4e37b3c24bcb6004875b9f8b08024303/windowsdesktop-runtime-8.0.4-win-x86.exe'
     'https://download.visualstudio.microsoft.com/download/pr/c1d08a81-6e65-4065-b606-ed1127a954d3/14fe55b8a73ebba2b05432b162ab3aa8/windowsdesktop-runtime-8.0.4-win-x64.exe'
-    'https://downloads.xvid.com/downloads/Xvid-1.3.7-20191228.exe'
+    'https://github.com/Nevcairiel/LAVFilters/releases/download/0.79.2/LAVFilters-0.79.2-Installer.exe'
 )
 outs=(
     'directx/directx.exe'
@@ -69,7 +69,7 @@ outs=(
     'mono/wine-mono.msi'
     'net/net86.exe'
     'net/net64.exe'
-    'codecs/xvid.exe'
+    'codecs/lav.exe'
 )
 
 for i in "${!urls[@]}"; do

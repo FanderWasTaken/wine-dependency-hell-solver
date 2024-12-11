@@ -25,6 +25,6 @@ start /wait installers/vcredist/vcrun6sp6/vcredist.exe /T:C:/windows/system32 /C
 start /wait installers/mono/wine-mono.msi
 start /wait installers/net/net86.exe /q
 start /wait installers/net/net64.exe /q
-start /wait installers/codecs/xvid.exe --mode unattended --decode_divx 1 --decode_3ivx 1 --decode_other 1
+start /wait installers/codecs/lav.exe /SP- /VERYSILENT /NORESTART /NOICONS
 cscript msg.vbs "Installation was completed successfully!"
 exit
