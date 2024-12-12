@@ -1,12 +1,12 @@
-# Wine Dependency Hell Solver
+# Wine Dependency Hell Solver 🍷
 
 ![logo](WDHS.png)
 
 ## Description
 
-If you ever had issues launching or running software with Wine, then try this script. I made it as a replacement for Wine/Proton-tricks, it functions similarly to Valve's installscript.vdf. Because not every piece of software comes with all the required dependencies, this script installs **every single required dependency**. So you can spend more time on using the software you want and less time on tinkering.
+If you ever had issues launching or running software with Wine, then try this script. I made it as a replacement for Wine/Proton-tricks. It functions similarly to Valve's installscript.vdf. Because not every piece of software comes with all the required dependencies, this script installs **every single required dependency**. So you can spend more time using the software you want and less time tinkering.
 
-The main goal of this project is to provide users with dependencies that Wine can't ship. For that reason WMP and Windows System Files aren't included here. If something still doesn't work after using this script and no Wine version fixes your issues, there's a good chance that you're trying to run a half-baked piece of software.
+The main goal of this project is to provide users with dependencies that Wine can't ship. WMP and Windows system files aren't included here. If something still doesn't work after using this script and no Wine version fixes your issues, there's a chance that you're trying to run a half-baked piece of software.
 
 > \[!TIP]
 > If you're having issues with your game or program of any kind try different Wine/Proton versions.
@@ -58,4 +58,4 @@ Here are the solutions I've found, that may or may not work:
 
 ***
 
-Feel free to donate if you like my work or if I was of any help to you!
+Feel free to donate if you like my work!
