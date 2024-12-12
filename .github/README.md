@@ -56,4 +56,4 @@ Here are the solutions I've found, that may or may not work:
 
 ***
 
-Feel free to donate if you like my work!
+<p style="text-align: center;">Feel free to donate if you like my work!</p>
