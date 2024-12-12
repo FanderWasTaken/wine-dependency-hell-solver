@@ -13,9 +13,9 @@ If you ever had issues with software in Wine, then try this script. I made it as
 | [7zip](https://7-zip.org/)|Crashing/non-functioning installers|
 | [DirectX End-User Runtimes](https://www.pcgamingwiki.com/wiki/Glossary:DirectX)                                           | Video and audio playback, missing or broken in-game elements |
 | [LAVFilters ](https://github.com/Nevcairiel/LAVFilters)                                                                                     | DirectShow filters for correct video playback                                        |
-| [Wine Mono](https://gitlab.winehq.org/mono/wine-mono) & [Microsoft .NET Desktop Runtime](https://www.pcgamingwiki.com/wiki/Windows#.NET_Framework) | Crashing programs, installers and games                      |
-| [NVIDIA PhysX](https://www.pcgamingwiki.com/wiki/Glossary:PhysX)                                           | Crashes when relying heavily on the technology               |
 | [Microsoft Visual C++ Redistributable Packages](https://github.com/abbodi1406/vcredist)               | Various crashes and missing .dll issues                      |
+| [NVIDIA PhysX](https://www.pcgamingwiki.com/wiki/Glossary:PhysX)                                           | Crashes when relying heavily on the technology               |
+| [Wine Mono](https://gitlab.winehq.org/mono/wine-mono) & [Microsoft .NET Desktop Runtime](https://www.pcgamingwiki.com/wiki/Windows#.NET_Framework) | Crashing programs, installers and games                      |
 
 ## Instructions
 
