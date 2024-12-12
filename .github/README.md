@@ -4,13 +4,7 @@
 
 ## Description
 
-If you ever had issues launching or running software with Wine, then try this script. I made it as a replacement for Wine/Proton-tricks. It functions similarly to Valve's installscript.vdf. Because not every piece of software comes with all the required dependencies, this script installs **every single required dependency**. So you can spend more time using the software you want and less time tinkering.
-
-The main goal of this project is to provide users with dependencies that Wine can't ship. WMP and Windows system files aren't included here. If something still doesn't work after using this script and no Wine version fixes your issues, there's a chance that you're trying to run a half-baked piece of software.
-
-## Why not use Wine/Proton-tricks?
-
-Patching prefixes for each program can get really annoying if you have multiple things you need to configure and become a giant time-waster if some patch doesn't work well with a different one.
+If you ever had issues with software in Wine, then try this script. I made it as an alternative for Wine/Proton-tricks, so you can spend more time using the software you want and less time tinkering. The main goal of this project is to provide users with dependencies similar to Valve's installscript.vdf.
 
 ## Contents
 
@@ -37,22 +31,25 @@ Make sure to have the following packages installed before proceeding: `7z wget`.
 
 ## Additional configuration
 
-Even after installing all of these dependencies I still ran into some issues:
+Here are some of the best practices to follow in order to minimize potential issues when running software with Wine:
 
-* Missing dlls (`unarc.dll` and `ISDone.dll`).
-* Crashing games and installers.
-
-Here are the solutions I've found, that may or may not work:
-
-* Increase <code>swap</code> size.
-* Increase the value of <code>vm.max\_map\_count</code>.
-* Update to newer version of Wine. I recommend 'proton' builds from [here](https://github.com/Kron4ek/Wine-Builds).
-* Update your graphics drivers.
+* Update your system.
+* [Update to newer version of Wine.](https://github.com/DavidoTek/ProtonUp-Qt) I recommend 'proton' builds from [Kron4ek](https://github.com/Kron4ek/Wine-Builds).
+* [Update your graphics drivers.](https://github.com/lutris/docs/blob/master/InstallingDrivers.md)
+* Disable Lutris Runtime in global settings.
+* Run games in X11 session instead of Wayland.
+* Do not use `gamescope` as a nested session.
+* [Increase <code>swap</code> size.](https://wiki.archlinux.org/title/Swap)
+* [Increase the value of <code>vm.max\_map\_count</code>.](https://wiki.archlinux.org/title/Gaming#Increase_vm.max_map_count)
 
 ## Credits
 
-* [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts)
-* [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide)
+* [7-Zip | Igor Pavlov](https://7-zip.org/)
+* [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts) ⭐️
+* [LAVFilters |  Nevcairiel](https://github.com/Nevcairiel/LAVFilters)
+* [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide) ⭐️
+* [VisualCppRedist AIO | abbodi1406](https://github.com/abbodi1406/vcredist)
+* [Wine Mono | Wine Developers](https://gitlab.winehq.org/mono/wine-mono)
 
 ***
 
