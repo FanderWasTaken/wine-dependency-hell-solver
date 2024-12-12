@@ -26,5 +26,5 @@ start /wait installers/mono/wine-mono.msi
 start /wait installers/net/net86.exe /q
 start /wait installers/net/net64.exe /q
 start /wait installers/codecs/lav.exe /SP- /VERYSILENT /NORESTART /NOICONS
-cscript msg.vbs "Installation was completed successfully!"
+cscript msg.vbs "Installation has completed successfully."
 exit

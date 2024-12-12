@@ -17,7 +17,7 @@ Patching prefixes for each program can get really annoying if you have multiple 
 
 ## Contents
 
-| Dependency                                                                                                                           | What it fixes                                                |
+| Dependency                                                                                                                           | Provides/Fixes                                                |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
 | [DirectX End-User Runtimes](https://www.microsoft.com/en-us/download/details.aspx?id=8109)                                           | Video and audio playback, missing or broken in-game elements |
 | [LAVFilters ](https://github.com/Nevcairiel/LAVFilters)                                                                                     | DirectShow filters for correct video playback                                        |
