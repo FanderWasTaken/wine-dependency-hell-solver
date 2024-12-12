@@ -8,9 +8,6 @@ If you ever had issues launching or running software with Wine, then try this sc
 
 The main goal of this project is to provide users with dependencies that Wine can't ship. WMP and Windows system files aren't included here. If something still doesn't work after using this script and no Wine version fixes your issues, there's a chance that you're trying to run a half-baked piece of software.
 
-> \[!TIP]
-> If you're having issues with your game or program of any kind try different Wine/Proton versions.
-
 ## Why not use Wine/Proton-tricks?
 
 Patching prefixes for each program can get really annoying if you have multiple things you need to configure and become a giant time-waster if some patch doesn't work well with a different one.
@@ -49,6 +46,7 @@ Here are the solutions I've found, that may or may not work:
 * Increase <code>swap</code> size.
 * Increase the value of <code>vm.max\_map\_count</code>.
 * Update to newer version of Wine. I recommend 'proton' builds from [here](https://github.com/Kron4ek/Wine-Builds).
+* Update your graphics drivers.
 
 ## Credits
 
