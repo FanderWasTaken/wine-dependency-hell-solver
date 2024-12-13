@@ -2,6 +2,10 @@
 
 ![logo](WDHS.png)
 
+> **⚠️ DISCLAMER ⚠️**
+>
+> This script won't be able to fix games or programs with bad code in them. Most of the work for software compatibility with Wine is done by people who work on that project. This script did solve some issues with games I was running; that's why I decided to publish it online. If some game isn't fixed by this script or any steps outlined below, there's a chance that you're trying to run a poorly made game or program. For edge-cases, I'd advise using emulators and VMs instead, as those provide a much better experience, based on my testing.
+
 ## Description
 
 If you ever had issues with software in Wine, then try this script. I made it as an alternative for Wine/Proton-tricks, so you can spend more time using the software you want and less time tinkering. The main goal of this project is to provide users with dependencies similar to Valve's installscript.vdf.
