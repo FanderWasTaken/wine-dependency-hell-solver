@@ -36,7 +36,6 @@ Here are some of the best practices to follow in order to minimize potential iss
 
 * [Increase <code>swap</code> size](https://wiki.archlinux.org/title/Swap)
 * [Increase the value of <code>vm.max\_map\_count</code>](https://wiki.archlinux.org/title/Gaming#Increase_vm.max_map_count)
-* [Load shared objects immediately](https://wiki.archlinux.org/title/Gaming#Load_shared_objects_immediately_for_better_first_time_latency)
 * [Update to newer version of Wine](https://github.com/DavidoTek/ProtonUp-Qt) ⭐️
   * I recommend builds from [Kron4ek](https://github.com/Kron4ek/Wine-Builds)
 * [Update your graphics drivers](https://github.com/lutris/docs/blob/master/InstallingDrivers.md)
