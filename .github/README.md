@@ -15,6 +15,7 @@ If you ever had issues with software in Wine, then try this script. I made it as
 * [LAVFilters ](https://github.com/Nevcairiel/LAVFilters)
 * [Microsoft Visual C++ Redistributable Packages](https://github.com/abbodi1406/vcredist)
 * [NVIDIA PhysX](https://www.pcgamingwiki.com/wiki/Glossary:PhysX)
+* [OpenAL](https://openal.org/)
 * [Wine Mono](https://gitlab.winehq.org/mono/wine-mono)
 
 ## Instructions
