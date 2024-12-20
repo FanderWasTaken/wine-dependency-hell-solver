@@ -6,7 +6,7 @@
 
 If you ever had issues with software in Wine, then try this script. I made it as an alternative for Wine/Proton-tricks, so you can spend more time using the software you want and less time tinkering. The main goal of this project is to provide users with dependencies similar to Valve's installscript.vdf.
 
-*Please note that not every game or program can be fixed by this script, but it should help in most cases.*
+*Please note that not every game or program can be fixed by this script, but it should help in most cases*
 
 ## Contents
 
@@ -16,13 +16,12 @@ If you ever had issues with software in Wine, then try this script. I made it as
 * [Microsoft Visual C++ Redistributable Packages](https://github.com/abbodi1406/vcredist)
 * [NVIDIA PhysX](https://www.pcgamingwiki.com/wiki/Glossary:PhysX)
 * [Wine Mono](https://gitlab.winehq.org/mono/wine-mono)
-* [XNA Framework Redistributable](https://www.pcgamingwiki.com/wiki/Engine:XNA)
 
 ## Instructions
 
-Make sure to have the following packages installed before proceeding: `7z wget`.
+Make sure to have the following packages installed before proceeding: `7z wget`
 
-1. Run `this command` in your terminal.
+1. Run this command in your terminal:
 
    ```
    bash <(wget -qO- https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)
