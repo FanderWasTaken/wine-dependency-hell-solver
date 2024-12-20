@@ -11,7 +11,7 @@ start /wait installers/directx/DXSETUP.exe /silent
 start /wait installers/physx/PhysX.exe /quiet
 start /wait installers/vcredist/visual.exe /ai58X239TEBV /gm2
 start /wait installers/vcredist/vcrun6/vcredist.exe /T:C:/windows/system32 /C /Q:A
-start /wait installers/vcredist/vcrun6sp6/vcredist.exe /T:C:/windows/system32 /C /Q:A
+:: start /wait installers/vcredist/vcrun6sp6/vcredist.exe /T:C:/windows/system32 /C /Q:A
 start /wait installers/mono/wine-mono.msi
 start /wait installers/codecs/lav.exe /SP- /VERYSILENT /NORESTART /NOICONS
 start /wait installers/codecs/oalinst.exe /silent
