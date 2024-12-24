@@ -6,8 +6,6 @@
 
 If you ever had issues with software in Wine, then try this script. I made it as an alternative for Wine/Proton-tricks, so you can spend more time using the software you want and less time tinkering. The main goal of this project is to provide users with dependencies similar to Valve's installscript.vdf.
 
-*Please note that not every game or program can be fixed by this script, but it should help in most cases*
-
 ## Contents
 
 * [7zip](https://7-zip.org/)
@@ -20,9 +18,7 @@ If you ever had issues with software in Wine, then try this script. I made it as
 
 ## Instructions
 
-Make sure to have the following packages installed before proceeding: `7z wget`
-
-1. Run this command in your terminal:
+1. Run this command in your [terminal](https://www.geeksforgeeks.org/how-to-open-terminal-in-linux/):
 
    ```
    bash <(wget -qO- https://raw.githubusercontent.com/FanderWasTaken/wine-dependency-hell-solver/main/WDHS.sh)
@@ -36,10 +32,11 @@ Here are some of the best practices to follow in order to minimize potential iss
 
 * [Increase <code>swap</code> size](https://wiki.archlinux.org/title/Swap)
 * [Increase the value of <code>vm.max\_map\_count</code>](https://wiki.archlinux.org/title/Gaming#Increase_vm.max_map_count)
-* [Update to newer version of Wine](https://github.com/DavidoTek/ProtonUp-Qt) ⭐️
-  * I recommend builds from [Kron4ek](https://github.com/Kron4ek/Wine-Builds)
-* [Update your graphics drivers](https://github.com/lutris/docs/blob/master/InstallingDrivers.md)
-* Update your system ⭐️
+* [Tweak kernel parameters](https://wiki.archlinux.org/title/Gaming#Make_the_changes_permanent)
+* [Update](https://github.com/DavidoTek/ProtonUp-Qt) to newer version of [Wine](https://github.com/Kron4ek/Wine-Builds)
+* Update your system
+
+*If you're still experiencing issues, check your game with [PCGamingWiki](https://www.pcgamingwiki.com/wiki/Home) for further fixes* 🃏
 
 ## Credits
 
