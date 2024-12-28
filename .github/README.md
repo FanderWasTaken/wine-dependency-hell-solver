@@ -11,10 +11,11 @@ If you ever had issues with software in Wine, then try this script. I made it as
 * [7zip](https://7-zip.org/)
 * [DirectX End-User Runtimes](https://www.pcgamingwiki.com/wiki/Glossary:DirectX)
 * [LAVFilters ](https://github.com/Nevcairiel/LAVFilters)
-* [Microsoft Visual C++ Redistributable Packages](https://github.com/abbodi1406/vcredist)
+* [Visual C++ Redistributable Packages](https://github.com/abbodi1406/vcredist)
 * [NVIDIA PhysX](https://www.pcgamingwiki.com/wiki/Glossary:PhysX)
 * [OpenAL](https://openal.org/)
-* [Wine Mono](https://gitlab.winehq.org/mono/wine-mono)
+* [TrueType core fonts](https://en.wikipedia.org/wiki/Core_fonts_for_the_Web)
+* [Wine Mono & Gecko](https://gitlab.winehq.org/wine/wine/-/wikis/home)
 
 ## Instructions
 
@@ -44,9 +45,10 @@ Here are some of the best practices to follow in order to minimize potential iss
 * [installscript.vdf | Valve](https://partner.steamgames.com/doc/sdk/installscripts) ⭐️
 * [LAVFilters |  Nevcairiel](https://github.com/Nevcairiel/LAVFilters)
 * [OpenAL | Creative Technology](https://www.openal.org/)
+* [Package of core fonts | noa](https://sourceforge.net/projects/corefonts/)
 * [Troubleshooting Guide | PCGamingWiki](https://www.pcgamingwiki.com/wiki/Troubleshooting_guide) ⭐️
 * [VisualCppRedist AIO | abbodi1406](https://github.com/abbodi1406/vcredist)
-* [Wine Mono | Wine Developers](https://gitlab.winehq.org/mono/wine-mono)
+* [Wine Mono & Gecko | Wine Developers](https://gitlab.winehq.org/wine/wine/-/wikis/home)
 
 ***
 
