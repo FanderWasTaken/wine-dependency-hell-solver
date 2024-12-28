@@ -9,12 +9,13 @@ If you ever had issues with software in Wine, then try this script. I made it as
 ## Contents
 
 * [7zip](https://7-zip.org/)
+* [.NET Framework](https://www.pcgamingwiki.com/wiki/Windows#.NET_Framework)
 * [DirectX End-User Runtimes](https://www.pcgamingwiki.com/wiki/Glossary:DirectX)
 * [LAVFilters ](https://github.com/Nevcairiel/LAVFilters)
-* [Visual C++ Redistributable Packages](https://github.com/abbodi1406/vcredist)
 * [NVIDIA PhysX](https://www.pcgamingwiki.com/wiki/Glossary:PhysX)
 * [OpenAL](https://openal.org/)
 * [TrueType core fonts](https://en.wikipedia.org/wiki/Core_fonts_for_the_Web)
+* [Visual C++ Redistributable Packages](https://github.com/abbodi1406/vcredist)
 * [Wine Mono & Gecko](https://gitlab.winehq.org/wine/wine/-/wikis/home)
 
 ## Instructions

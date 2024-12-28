@@ -27,5 +27,7 @@ start /wait installers/fonts/trebuc32.exe /Q
 start /wait installers/fonts/verdan32.exe /Q
 start /wait installers/fonts/webdin32.exe /Q
 start /wait installers/gecko/wine-gecko.msi
+start /wait installers/dotnet/dotnet86.exe /q
+start /wait installers/dotnet/dotnet64.exe /q
 cscript msg.vbs "Installation has completed successfully."
 exit
