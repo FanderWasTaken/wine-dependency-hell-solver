@@ -25,7 +25,6 @@ start /wait installers/fonts/impact32.exe /Q
 start /wait installers/fonts/times32.exe /Q
 start /wait installers/fonts/trebuc32.exe /Q
 start /wait installers/fonts/verdan32.exe /Q
-start /wait installers/fonts/wd97vwr32.exe /Q
 start /wait installers/fonts/webdin32.exe /Q
 start /wait installers/gecko/wine-gecko.msi
 cscript msg.vbs "Installation has completed successfully."

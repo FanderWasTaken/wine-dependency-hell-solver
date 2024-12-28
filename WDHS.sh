@@ -58,7 +58,6 @@ urls=(
     'https://sourceforge.net/projects/corefonts/files/the%20fonts/final/times32.exe'
     'https://sourceforge.net/projects/corefonts/files/the%20fonts/final/trebuc32.exe'
     'https://sourceforge.net/projects/corefonts/files/the%20fonts/final/verdan32.exe'
-    'https://sourceforge.net/projects/corefonts/files/the%20fonts/final/wd97vwr32.exe'
     'https://sourceforge.net/projects/corefonts/files/the%20fonts/final/webdin32.exe'
     'https://dl.winehq.org/wine/wine-gecko/2.47/wine_gecko-2.47-x86_64.msi'
 )
@@ -82,7 +81,6 @@ outs=(
     'fonts/times32.exe'
     'fonts/trebuc32.exe'
     'fonts/verdan32.exe'
-    'fonts/wd97vwr32.exe'
     'fonts/webdin32.exe'
     'gecko/wine-gecko.msi'
 )
