@@ -4,7 +4,7 @@
 
 ## Description
 
-If you ever had issues with software in Wine, then try this script. I made it as an alternative for Wine/Proton-tricks, so you can spend more time using the software you want and less time tinkering. The main goal of this project is to provide users with dependencies similar to Valve's installscript.vdf.
+If you ever had issues with software in Wine, then try this script. I made it as an alternative for Wine/Proton-tricks, so you can spend more time using the software you want and less time tinkering. The main goal of this project is to provide users with all most common dependencies similar to Valve's installscript.vdf.
 
 ## Contents
 
