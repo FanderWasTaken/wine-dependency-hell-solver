@@ -1,3 +1,6 @@
+> [!WARNING]
+> This project has been depricated in favour of better practises and better ways of fixing Wine issues. For automatic game fixes please use [DW-Proton](https://dawn.wine/dawn-winery/dwproton).
+
 # Wine Dependency Hell Solver 🍷
 
 ![logo](WDHS.png)
